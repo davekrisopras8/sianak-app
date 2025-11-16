@@ -1,7 +1,7 @@
 # SiANAK - Sistem Intervensi Anti Nikah Anak
 
 ## Deskripsi
-Platform AI-powered untuk mencegah pernikahan dini di Jawa Timur.
+Platform AI-powered untuk mencegah pernikahan anak di Jawa Timur.
 
 ## Cara Menjalankan
 1. Download/clone repository

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Detail Konten Budaya</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#36e27b",
+              "background-light": "#f6f8f7",
+              "background-dark": "#111714",
+            },
+            fontFamily: {
+              "display": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#333333] dark:text-[#EAEAEA]">
+<!-- TopNavBar -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="container mx-auto px-4">
+<div class="flex items-center justify-between whitespace-nowrap border-b border-solid border-black/10 dark:border-white/10 py-3">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4 text-black dark:text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 42.4379C4 42.4379 14.0962 36.0744 24 41.1692C35.0664 46.8624 44 42.2078 44 42.2078L44 7.01134C44 7.01134 35.068 11.6577 24.0031 5.96913C14.0971 0.876274 4 7.27094 4 7.27094L4 42.4379Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">Warisan Lisan</h2>
+</div>
+<nav class="hidden md:flex items-center gap-9">
+<a class="text-sm font-medium leading-normal hover:text-primary" href="#">Jelajahi</a>
+<a class="text-sm font-medium leading-normal hover:text-primary" href="#">Tentang Kami</a>
+<a class="text-sm font-medium leading-normal hover:text-primary" href="#">Kontribusi</a>
+</nav>
+</div>
+<div class="flex flex-1 justify-end items-center gap-4">
+<label class="hidden md:flex flex-col min-w-40 !h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-black/60 dark:text-white/60 flex border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/5 items-center justify-center pl-3 rounded-l-lg border-r-0">
+<span class="material-symbols-outlined" style="font-size: 20px;">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/5 h-full placeholder:text-black/60 dark:placeholder:text-white/60 px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal" placeholder="Cari..." value=""/>
+</div>
+</label>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-background-dark text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Masuk</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User avatar placeholder" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB78q9APuxsUTZN-jdi3zKv-yUEqBzfhgs9a7O8pFIqz-h9DnXQxUp--P3LvPHNHzO7rvH8UNA24Ro6LRz_qzqKNpcnlGE3R-Gqixmu99mmnMC3ljteYVC-0SSbkbJqyHFZ9cWblUHLc-CxlMqWWvVPpBh5uWJE6-paM7KN3wcgAsRio1effh4BwgphsB7YYo6zLqJcua2Ud0fuDkz6GUAbao2tzliiZ3cpwiNbKvftzlwUZ4033ZELf2aez1R87a3ZxrzKcUUZP1Y");'></div>
+</div>
+</div>
+</div>
+</header>
+<main class="container mx-auto px-4 py-8">
+<div class="w-full">
+<!-- Breadcrumbs -->
+<div class="flex flex-wrap gap-2 mb-6">
+<a class="text-black/60 dark:text-white/60 hover:text-primary text-sm font-medium leading-normal" href="#">Beranda</a>
+<span class="text-black/60 dark:text-white/60 text-sm font-medium leading-normal">/</span>
+<a class="text-black/60 dark:text-white/60 hover:text-primary text-sm font-medium leading-normal" href="#">Jawa Barat</a>
+<span class="text-black/60 dark:text-white/60 text-sm font-medium leading-normal">/</span>
+<a class="text-black/60 dark:text-white/60 hover:text-primary text-sm font-medium leading-normal" href="#">Tradisi Lisan</a>
+<span class="text-black/60 dark:text-white/60 text-sm font-medium leading-normal">/</span>
+<span class="text-black dark:text-white text-sm font-medium leading-normal">Upacara Adat Seren Taun</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 lg:gap-8">
+<!-- Left Column -->
+<div class="lg:col-span-2">
+<!-- MediaPlayer -->
+<div class="relative flex items-center justify-center bg-black bg-cover bg-center aspect-video rounded-xl overflow-hidden mb-6" data-alt="Video thumbnail of a cultural ceremony" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBPdVvHEoaloYITq2ud6Fw6uLCNkkwZrcJCmRWK7hcNl1p3x6QOz0oYVyxRN4TOa-eyXO9McazC7XkSI5pIPYiXU5T3sxe-b0VVkx8nTl1YWrHyU7coVe7zDv9G8Aoy-j0NSY4fMEOjoZtb83YjRcMZGlqgSSxuVbddjQjUqrroRAFoSqoR48ixxjTMhaUQv_awp3FxzrKo4xEG8uASfjJDBFVY8fDDe0_8SpSoSq7nFAVnpEOKawBVG6rnKmJq2FtQE7neV_8esHE");'>
+<button class="flex shrink-0 items-center justify-center rounded-full size-16 bg-black/50 text-white backdrop-blur-sm">
+<span class="material-symbols-outlined text-4xl">play_arrow</span>
+</button>
+<div class="absolute inset-x-0 bottom-0 px-4 py-3 bg-gradient-to-t from-black/60 to-transparent">
+<div class="flex h-4 items-center justify-center">
+<div class="h-1 flex-1 rounded-full bg-primary"></div>
+<div class="relative"><div class="absolute -left-2 -top-[6px] size-4 rounded-full bg-white ring-2 ring-primary"></div></div>
+<div class="h-1 flex-1 rounded-full bg-white/40"></div>
+</div>
+<div class="flex items-center justify-between">
+<p class="text-white text-xs font-medium leading-normal tracking-[0.015em]">12:37</p>
+<p class="text-white text-xs font-medium leading-normal tracking-[0.015em]">25:12</p>
+</div>
+</div>
+</div>
+<!-- PageHeading -->
+<div class="flex flex-wrap justify-between gap-3 mb-4">
+<div class="flex min-w-72 flex-col gap-2">
+<h1 class="text-black dark:text-white text-4xl font-black leading-tight tracking-[-0.033em]">Upacara Adat Seren Taun di Kasepuhan Ciptagelar</h1>
+<p class="text-black/60 dark:text-white/60 text-base font-normal leading-normal">Dilihat 1,234 kali</p>
+</div>
+</div>
+<!-- Chips -->
+<div class="flex gap-2 p-1 flex-wrap mb-6">
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-black/10 dark:bg-white/10 px-3">
+<p class="text-black dark:text-white text-sm font-medium leading-normal">Upacara Adat</p>
+</div>
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-black/10 dark:bg-white/10 px-3">
+<p class="text-black dark:text-white text-sm font-medium leading-normal">Jawa Barat</p>
+</div>
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-black/10 dark:bg-white/10 px-3">
+<p class="text-black dark:text-white text-sm font-medium leading-normal">Bahasa Sunda</p>
+</div>
+</div>
+<!-- Description -->
+<div class="prose prose-lg dark:prose-invert max-w-none text-black/80 dark:text-white/80 font-normal leading-relaxed mb-8">
+<p>Upacara Adat Seren Taun merupakan sebuah ritual agraris yang dilakukan oleh masyarakat Sunda sebagai ungkapan rasa syukur atas hasil panen padi yang melimpah. Di Kasepuhan Ciptagelar, tradisi ini telah berlangsung selama ratusan tahun dan menjadi pusat kegiatan budaya tahunan.</p>
+<p>Ritual ini tidak hanya sekadar perayaan panen, tetapi juga mencakup serangkaian prosesi adat yang sarat makna filosofis, mulai dari 'Ngajayak' (menjemput padi) hingga 'Pesta Dadung' dan pertunjukan seni tradisional. Dokumentasi ini merekam secara mendalam setiap tahapan upacara dan wawancara dengan para sesepuh adat mengenai pentingnya menjaga warisan leluhur ini.</p>
+</div>
+<!-- Metadata -->
+<div class="border-t border-black/10 dark:border-white/10 pt-6">
+<h3 class="text-xl font-bold mb-4">Detail Dokumentasi</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4 text-sm">
+<div class="flex"><strong class="w-32 shrink-0 font-semibold">Tanggal</strong>: 22 Agustus 2023</div>
+<div class="flex"><strong class="w-32 shrink-0 font-semibold">Durasi</strong>: 25 menit 12 detik</div>
+<div class="flex"><strong class="w-32 shrink-0 font-semibold">Bahasa</strong>: Sunda, Indonesia</div>
+<div class="flex"><strong class="w-32 shrink-0 font-semibold">Lokasi</strong>: Kasepuhan Ciptagelar, Sukabumi</div>
+</div>
+</div>
+</div>
+<!-- Right Column -->
+<div class="lg:col-span-1 space-y-8 mt-8 lg:mt-0">
+<!-- Action Buttons -->
+<div class="flex items-center space-x-2">
+<button class="flex-1 flex items-center justify-center gap-2 h-11 rounded-lg bg-black/10 dark:bg-white/10 hover:bg-black/20 dark:hover:bg-white/20 transition-colors">
+<span class="material-symbols-outlined">thumb_up</span>
+<span class="font-bold">1.2k</span>
+</button>
+<button class="flex-1 flex items-center justify-center gap-2 h-11 rounded-lg bg-black/10 dark:bg-white/10 hover:bg-black/20 dark:hover:bg-white/20 transition-colors">
+<span class="material-symbols-outlined">share</span>
+<span class="font-bold">Bagikan</span>
+</button>
+<button class="flex-1 flex items-center justify-center gap-2 h-11 rounded-lg bg-black/10 dark:bg-white/10 hover:bg-black/20 dark:hover:bg-white/20 transition-colors">
+<span class="material-symbols-outlined">download</span>
+<span class="font-bold">Unduh</span>
+</button>
+</div>
+<!-- Contributor Card -->
+<div class="bg-black/5 dark:bg-white/10 rounded-xl p-5">
+<h3 class="text-lg font-bold mb-4">Kontributor</h3>
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12" data-alt="Avatar of Budi Santoso" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAEI8_l707EASd35LpfnYqoNY9xCHOmUdbGhPUWRoQ-PUwbbBopxzGBwn4Fzfdf4Umf3L28pzO2D3KfayiWlB62oGCIX65wmIzeArfGyvQCgVAcXNm4CkmRFAA_-OSVHEIETqB-ZEuYOqGr2ATwJW5usukYwTd0_G7rnJ2QQEtM9sUmaPMos--3JH-R79R7qwAoJr0RBu21PvK1XD8Vo6cuNgiGdkeXtAsjHq6xoCkqDSJv8SupX60cN3WOQgSpHXpviwuQzm8LWjE");'></div>
+<div>
+<p class="font-bold text-base">Budi Santoso</p>
+<p class="text-sm text-black/60 dark:text-white/60">Desa Ciptagelar</p>
+<p class="text-sm text-black/60 dark:text-white/60">12 Kontribusi</p>
+</div>
+</div>
+</div>
+<!-- Source Person Card -->
+<div class="bg-black/5 dark:bg-white/10 rounded-xl p-5">
+<h3 class="text-lg font-bold mb-4">Narasumber</h3>
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12" data-alt="Photo of Abah Ugi" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDunxLc1KOM1uKZJK9YXMPQopdACA8HLMKV4FsPCABOHySsJNBtyl5qFv44MPViU_pcwpwCc6srVXGXrkCSZVaKFWhHXGP4ccEQSIHdcUPFiu2tysEaQs35cwM2StJgB2QC5pW3elUVKb4pMGBnMBEhzdod7nIJN83kYZH13V1d6eq5BAfijPuOYjxlLx1ybMVSngcxRXmhHeeSqIByw5BXf5NH14GOavbCJNSzUpIKGyxk9F_PdItRFUN28PZ-1OTtZe6gq4rnpYk");'></div>
+<div>
+<p class="font-bold text-base">Abah Ugi Sugriana Rakasiwi</p>
+<p class="text-sm text-black/60 dark:text-white/60">Pimpinan Adat (82 tahun)</p>
+</div>
+</div>
+</div>
+<!-- Educator Section -->
+<div class="bg-black/5 dark:bg-white/10 rounded-xl p-5">
+<h3 class="text-lg font-bold mb-4 flex items-center gap-2"><span class="material-symbols-outlined text-primary">school</span> Materi Pembelajaran</h3>
+<ul class="space-y-3 text-sm font-medium">
+<li><a class="flex items-center gap-2 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">description</span> Unduh RPP (.pdf)</a></li>
+<li><a class="flex items-center gap-2 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">assignment</span> Unduh Lembar Kerja Siswa (.pdf)</a></li>
+<li><a class="flex items-center gap-2 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">quiz</span> Unduh Kuis (.docx)</a></li>
+<li><a class="flex items-center gap-2 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">code</span> Kode Sematan LMS</a></li>
+</ul>
+<button class="mt-5 w-full flex items-center justify-center gap-2 h-11 rounded-lg bg-primary text-background-dark font-bold hover:bg-primary/90 transition-colors">
+<span class="material-symbols-outlined">add_circle</span>
+<span>Tambah ke Koleksi Saya</span>
+</button>
+</div>
+<!-- Researcher Section -->
+<div class="bg-black/5 dark:bg-white/10 rounded-xl p-5">
+<h3 class="text-lg font-bold mb-4 flex items-center gap-2"><span class="material-symbols-outlined text-primary">science</span> Alat Penelitian</h3>
+<div class="space-y-3 text-sm">
+<p class="font-medium">Format Kutipan:</p>
+<div class="bg-black/10 dark:bg-white/10 p-3 rounded-lg text-xs font-mono">
+<p>Santoso, B. (2023). Upacara Adat Seren Taun di Kasepuhan Ciptagelar. Warisan Lisan. Diambil dari [URL]</p>
+</div>
+<div class="flex gap-2">
+<button class="text-xs font-bold py-1 px-3 rounded-full bg-primary text-background-dark">APA</button>
+<button class="text-xs font-bold py-1 px-3 rounded-full bg-black/20 dark:bg-white/20">MLA</button>
+</div>
+</div>
+<div class="flex gap-2 mt-5">
+<button class="flex-1 flex items-center justify-center gap-2 h-11 rounded-lg bg-black/10 dark:bg-white/10 font-bold hover:bg-black/20 dark:hover:bg-white/20 transition-colors">
+<span class="material-symbols-outlined">file_download</span>
+<span>Ekspor (JSON)</span>
+</button>
+<button class="w-full flex-1 items-center justify-center gap-2 h-11 rounded-lg bg-primary text-background-dark font-bold hover:bg-primary/90 transition-colors">
+<span class="material-symbols-outlined">add_circle</span>
+<span>Tambah ke Koleksi</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Related Content -->
+<div class="mt-16 border-t border-black/10 dark:border-white/10 pt-8">
+<h2 class="text-2xl font-bold mb-6">Konten Terkait</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Related Item Card -->
+<div class="group">
+<div class="relative aspect-video rounded-lg overflow-hidden mb-3">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-300 group-hover:scale-105" data-alt="Thumbnail for related content 1" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDiaT5CRZtvK9waJVHLn4n0qatS6Vgz7Vq9eTLpV70fMb7o_LO4U94FHsgxDvHKtGESWLyUsiyAerlfLnQpVoOaig6iPyPQFOOW7bX7P6i8RJUoxSEhPjGuRJ7JXCa6RYoFUWHOq9dGNtOG0kxeYiQBXusxNU1Qyq-bZh-D99y5SnaM9V6dZWVGYGZOTbAafnXhsb1pGtwH3pZPCFzKEwQqq5DsV-eQR8jGuW3dmt_ukzB5bTmdafeyqDHljh6Hy-Khd4m6Q_dAbbA");'></div>
+<div class="absolute inset-0 bg-black/20"></div>
+<div class="absolute bottom-2 right-2 bg-black/60 text-white text-xs font-bold px-2 py-1 rounded">15:45</div>
+</div>
+<h4 class="font-bold text-base group-hover:text-primary transition-colors">Tradisi Menenun di Desa Sade</h4>
+<p class="text-sm text-black/60 dark:text-white/60">Lombok, Nusa Tenggara Barat</p>
+</div>
+<!-- Related Item Card -->
+<div class="group">
+<div class="relative aspect-video rounded-lg overflow-hidden mb-3">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-300 group-hover:scale-105" data-alt="Thumbnail for related content 2" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCnpoNOgHB_qavhiTR4Lh5bgAJZn630Gzh-d8HhQDbisCQPxNvYigQHgVGA1Pd7pl16s74hGok_-13x5dW6IBCkMd8jMQ-ROG4V9hsh7zpohYXxNSza0k8ThtOEZisuQDOaywDWBouJC-LqABo6zwzIWo3-Ky_XsKDFASk5LIXeXtWxqcpG05x3soVI1qHmwePY-MySWqca_RxvgSPgHcCNpqMAS9bQ6ld4-pKujr1Yr0_Rui8zSxc_S2z1HWcuf0Qvl17cfOrknao");'></div>
+<div class="absolute inset-0 bg-black/20"></div>
+<div class="absolute bottom-2 right-2 bg-black/60 text-white text-xs font-bold px-2 py-1 rounded">08:12</div>
+</div>
+<h4 class="font-bold text-base group-hover:text-primary transition-colors">Upacara Rambu Solo di Tana Toraja</h4>
+<p class="text-sm text-black/60 dark:text-white/60">Sulawesi Selatan</p>
+</div>
+<!-- Related Item Card -->
+<div class="group">
+<div class="relative aspect-video rounded-lg overflow-hidden mb-3">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-300 group-hover:scale-105" data-alt="Thumbnail for related content 3" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBBwHSy1rKbXlFvwdK-zDa4BzjUgpuFkLYwXOlwmXC-VF8tZeGL86noBHD8tcz8AxUu4FVR7JvKUdbWrr8ooL8HCf-P7zyCjb2lUYL_7VOz0M6nIIF_O1Z67HfmAF503ArB-gbHCf2-Oeywb2JfrQhFWQp8EV5QPwVKd6DeloVGKCHQ50zFOQIvdcEkQYeiDqNxaDCvU68ZUbOurJXI4z_6JJNe0ubvCoAxnmaMGbFPKI7Q8dGh3FR0-R6ppam8srPV8kABS95L0vc");'></div>
+<div class="absolute inset-0 bg-black/20"></div>
+<div class="absolute bottom-2 right-2 bg-black/60 text-white text-xs font-bold px-2 py-1 rounded">32:05</div>
+</div>
+<h4 class="font-bold text-base group-hover:text-primary transition-colors">Kisah Para Empu Keris di Madura</h4>
+<p class="text-sm text-black/60 dark:text-white/60">Sumenep, Jawa Timur</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>
