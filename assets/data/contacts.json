@@ -1,0 +1,53 @@
+{
+  "contacts": [
+    {
+      "id": 1,
+      "name": "DP3AK Jawa Timur",
+      "type": "DP3AK",
+      "address": "Jl. Jagir Wonokromo No. 358 Kota Surabaya 60239",
+      "phone": "(031) 99842251",
+      "whatsapp": "6285770007871",
+      "email": "dp3ak@jatimprov.go.id",
+      "website": "https://dp3ak.jatimprov.go.id",
+      "regency": "Surabaya",
+      "description": "Dinas Pemberdayaan Perempuan dan Perlindungan Anak Provinsi Jawa Timur"
+    },
+    {
+      "id": 2,
+      "name": "LBH Surabaya",
+      "type": "LBH",
+      "address": "Jl. Kidal No.6, Pacar Keling, Kec. Tambaksari, Kota Surabaya",
+      "phone": "(031) 502 2273",
+      "whatsapp": "null",
+      "email": "bantuanhukumsby@gmail.com",
+      "website": "https://bantuanhukumsby.or.id",
+      "regency": "Surabaya",
+      "description": "Lembaga Bantuan Hukum Surabaya menyediakan bantuan hukum gratis"
+    },
+    {
+      "id": 3,
+      "name": "P2TP2A Surabaya",
+      "type": "P2TP2A",
+      "address": "JL. Nginden Permata I, Surabaya",
+      "phone": "+62 31 5929103",
+      "whatsapp": "+62 31 5929103",
+      "email": "p2tp2a@surabayakota.go.id",
+      "website": "hhttps://id551226-pusat-pelayanan-terpadu-pemberdayaan-perempuan-dan-ana.contact.page",
+      "regency": "Surabaya",
+      "description": "Pusat Pelayanan Terpadu Pemberdayaan Perempuan dan Anak"
+    },
+    {
+      "id": 4,
+      "name": "Komnas Perempuan",
+      "type": "Komnas",
+      "address": "Jl. Latuharhary No.4b, RT.1/RW.4, Menteng, Kec. Menteng Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10310",
+      "phone": "129",
+      "whatsapp": "+62-21-3903963",
+      "email": "ppid@komnasperempuan.go.id",
+      "website": "https://www.komnasperempuan.go.id",
+      "regency": "Jakarta",
+      "description": "Komisi Nasional Anti Kekerasan terhadap Perempuan"
+    }
+  ],
+  "regencies": ["Surabaya"]
+}
