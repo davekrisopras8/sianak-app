@@ -135,6 +135,12 @@
       };
     </script>
     <style>
+      html,
+      body {
+        overflow-x: hidden;
+        max-width: 100%;
+      }
+
       .glass-effect {
         background: rgba(255, 255, 255, 0.7);
         backdrop-filter: blur(10px);
@@ -154,6 +160,29 @@
 
       .hover-lift:hover {
         transform: translateY(-8px);
+      }
+
+      #header {
+        z-index: 9999;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+      }
+
+      #mobileMenuBtn {
+        z-index: 10000;
+        position: relative;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      section {
+        width: 100%;
+        overflow-x: hidden;
       }
     </style>
   </head>
@@ -238,7 +267,7 @@
           <!-- Mobile Menu Button -->
           <button
             id="mobileMenuBtn"
-            class="md:hidden p-2 rounded-lg hover:bg-brand-purple-50 transition-colors"
+            class="md:hidden p-2 rounded-lg hover:bg-brand-purple-50 transition-colors z-50 relative"
           >
             <svg
               class="w-6 h-6 text-gray-700"
@@ -260,7 +289,7 @@
       <!-- Mobile Menu -->
       <div
         id="mobileMenu"
-        class="hidden md:hidden glass-effect border-t border-white/20"
+        class="hidden md:hidden bg-white border-t border-white/20 absolute top-full left-0 right-0 z-40"
       >
         <div class="px-4 py-4 space-y-2">
           <a
