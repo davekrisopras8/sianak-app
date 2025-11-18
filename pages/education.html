@@ -1,0 +1,1617 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Edukasi tentang pencegahan pernikahan anak - SiANAK"
+    />
+    <title>Edukasi - SiANAK</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+            colors: {
+              brand: {
+                purple: {
+                  50: "#faf5ff",
+                  100: "#f3e8ff",
+                  200: "#e9d5ff",
+                  300: "#d8b4fe",
+                  400: "#c084fc",
+                  500: "#a855f7",
+                  600: "#9333ea",
+                  700: "#7e22ce",
+                  800: "#6b21a8",
+                  900: "#581c87",
+                },
+                teal: {
+                  50: "#f0fdfa",
+                  100: "#ccfbf1",
+                  200: "#99f6e4",
+                  300: "#5eead4",
+                  400: "#2dd4bf",
+                  500: "#14b8a6",
+                  600: "#0d9488",
+                  700: "#0f766e",
+                  800: "#115e59",
+                  900: "#134e4a",
+                },
+              },
+              status: {
+                danger: {
+                  500: "#ef4444",
+                  600: "#dc2626",
+                  700: "#b91c1c",
+                },
+                warning: {
+                  500: "#f59e0b",
+                  600: "#d97706",
+                },
+                success: {
+                  500: "#10b981",
+                  600: "#059669",
+                },
+              },
+            },
+            spacing: {
+              18: "4.5rem",
+              22: "5.5rem",
+              26: "6.5rem",
+              30: "7.5rem",
+            },
+            borderRadius: {
+              "4xl": "2rem",
+              "5xl": "2.5rem",
+              "6xl": "3rem",
+            },
+            animation: {
+              float: "float 6s ease-in-out infinite",
+              "pulse-glow": "pulse-glow 2s ease-in-out infinite",
+              "slide-up": "slide-up 0.5s ease-out",
+              "scale-in": "scale-in 0.3s ease-out",
+              "fade-in": "fade-in 0.5s ease-out",
+              "bounce-soft": "bounce-soft 2s ease-in-out infinite",
+            },
+            keyframes: {
+              float: {
+                "0%, 100%": { transform: "translateY(0px)" },
+                "50%": { transform: "translateY(-20px)" },
+              },
+              "pulse-glow": {
+                "0%, 100%": { boxShadow: "0 0 20px rgba(168, 85, 247, 0.4)" },
+                "50%": { boxShadow: "0 0 40px rgba(168, 85, 247, 0.8)" },
+              },
+              "slide-up": {
+                "0%": { transform: "translateY(20px)", opacity: "0" },
+                "100%": { transform: "translateY(0)", opacity: "1" },
+              },
+              "scale-in": {
+                "0%": { transform: "scale(0.9)", opacity: "0" },
+                "100%": { transform: "scale(1)", opacity: "1" },
+              },
+              "fade-in": {
+                "0%": { opacity: "0" },
+                "100%": { opacity: "1" },
+              },
+              "bounce-soft": {
+                "0%, 100%": { transform: "translateY(0)" },
+                "50%": { transform: "translateY(-10px)" },
+              },
+            },
+            boxShadow: {
+              "purple-glow": "0 0 20px rgba(147, 51, 234, 0.3)",
+              "purple-glow-lg": "0 0 40px rgba(147, 51, 234, 0.5)",
+              "teal-glow": "0 0 20px rgba(20, 184, 166, 0.3)",
+              "teal-glow-lg": "0 0 40px rgba(20, 184, 166, 0.5)",
+              glass: "0 8px 32px 0 rgba(31, 38, 135, 0.1)",
+            },
+            backdropBlur: {
+              xs: "2px",
+            },
+            backgroundImage: {
+              "gradient-purple": "linear-gradient(135deg, #9333ea, #7e22ce)",
+              "gradient-teal": "linear-gradient(135deg, #14b8a6, #0d9488)",
+              "gradient-brand": "linear-gradient(135deg, #9333ea, #14b8a6)",
+            },
+            maxWidth: {
+              "8xl": "88rem",
+              "9xl": "96rem",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .glass-effect {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+      }
+
+      .gradient-text {
+        background: linear-gradient(135deg, #9333ea, #14b8a6);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .hover-lift {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .hover-lift:hover {
+        transform: translateY(-8px);
+      }
+
+      .video-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+      }
+
+      .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 1rem;
+      }
+
+      .tab-content {
+        display: none;
+      }
+
+      .tab-content.active {
+        display: block;
+      }
+
+      .quiz-option {
+        transition: all 0.3s ease;
+      }
+
+      .quiz-option:hover {
+        transform: translateX(5px);
+      }
+
+      .quiz-option.selected {
+        background-color: #f3e8ff;
+        border-color: #9333ea;
+      }
+
+      .quiz-option.correct {
+        background-color: #d1fae5;
+        border-color: #10b981;
+      }
+
+      .quiz-option.incorrect {
+        background-color: #fee2e2;
+        border-color: #ef4444;
+      }
+    </style>
+  </head>
+
+  <body
+    class="font-sans antialiased bg-gradient-to-br from-brand-purple-50 via-white to-brand-teal-50"
+  >
+    <!-- Navigation -->
+    <header
+      class="fixed top-0 left-0 right-0 z-50 glass-effect border-b border-white/20 transition-all duration-300"
+      id="header"
+    >
+      <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <!-- Logo -->
+          <a href="/index.html" class="flex items-center gap-3 group">
+            <div
+              class="w-10 h-10 bg-gradient-to-br from-brand-purple-600 to-brand-teal-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg"
+            >
+              <svg
+                class="w-6 h-6 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                />
+              </svg>
+            </div>
+            <span class="text-2xl font-black gradient-text">SiANAK</span>
+          </a>
+
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex items-center gap-2">
+            <a
+              href="/index.html"
+              class="px-4 py-2 text-gray-700 hover:text-brand-purple-600 font-medium rounded-lg hover:bg-brand-purple-50/50 transition-all duration-200"
+              >Beranda</a
+            >
+            <a
+              href="/pages/about.html"
+              class="px-4 py-2 text-gray-700 hover:text-brand-purple-600 font-medium rounded-lg hover:bg-brand-purple-50/50 transition-all duration-200"
+              >Tentang Kami</a
+            >
+            <a
+              href="/pages/risk-assessment.html"
+              class="px-4 py-2 text-gray-700 hover:text-brand-purple-600 font-medium rounded-lg hover:bg-brand-purple-50/50 transition-all duration-200"
+              >Cek Risiko</a
+            >
+            <a
+              href="/pages/chatbot.html"
+              class="px-4 py-2 text-gray-700 hover:text-brand-purple-600 font-medium rounded-lg hover:bg-brand-purple-50/50 transition-all duration-200"
+              >Chatbot</a
+            >
+            <a
+              href="/pages/contacts.html"
+              class="px-4 py-2 text-gray-700 hover:text-brand-purple-600 font-medium rounded-lg hover:bg-brand-purple-50/50 transition-all duration-200"
+              >Kontak</a
+            >
+            <a
+              href="/pages/stories.html"
+              class="px-4 py-2 text-gray-700 hover:text-brand-purple-600 font-medium rounded-lg hover:bg-brand-purple-50/50 transition-all duration-200"
+              >Cerita</a
+            >
+          </div>
+
+          <!-- CTA Buttons -->
+          <div class="hidden md:flex items-center gap-3">
+            <a href="/pages/contacts.html">
+              <button
+                class="px-6 py-2.5 bg-gradient-to-r from-brand-purple-600 to-brand-purple-700 text-white font-semibold rounded-lg hover:from-brand-purple-700 hover:to-brand-purple-800 transition-all duration-300 shadow-lg hover:shadow-brand-purple-500/50 hover:scale-105"
+              >
+                Butuh Bantuan?
+              </button>
+            </a>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button
+            id="mobileMenuBtn"
+            class="md:hidden p-2 rounded-lg hover:bg-brand-purple-50 transition-colors"
+          >
+            <svg
+              class="w-6 h-6 text-gray-700"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobileMenu"
+        class="hidden md:hidden glass-effect border-t border-white/20"
+      >
+        <div class="px-4 py-4 space-y-2">
+          <a
+            href="/index.html"
+            class="block px-4 py-3 text-gray-700 hover:text-brand-purple-600 font-medium rounded-lg hover:bg-brand-purple-50 transition-all"
+            >Beranda</a
+          >
+          <a
+            href="/pages/about.html"
+            class="block px-4 py-3 text-gray-700 hover:text-brand-purple-600 font-medium rounded-lg hover:bg-brand-purple-50 transition-all"
+            >Tentang Kami</a
+          >
+          <a
+            href="/pages/risk-assessment.html"
+            class="block px-4 py-3 text-gray-700 hover:text-brand-purple-600 font-medium rounded-lg hover:bg-brand-purple-50 transition-all"
+            >Cek Risiko</a
+          >
+          <a
+            href="/pages/chatbot.html"
+            class="block px-4 py-3 text-gray-700 hover:text-brand-purple-600 font-medium rounded-lg hover:bg-brand-purple-50 transition-all"
+            >Chatbot</a
+          >
+          <a
+            href="/pages/contacts.html"
+            class="block px-4 py-3 text-gray-700 hover:text-brand-purple-600 font-medium rounded-lg hover:bg-brand-purple-50 transition-all"
+            >Kontak</a
+          >
+          <a
+            href="/pages/stories.html"
+            class="block px-4 py-3 text-gray-700 hover:text-brand-purple-600 font-medium rounded-lg hover:bg-brand-purple-50 transition-all"
+            >Cerita</a
+          >
+          <div class="pt-4 space-y-2 border-t border-gray-200">
+            <button
+              class="w-full px-6 py-3 bg-gradient-to-r from-brand-purple-600 to-brand-purple-700 text-white font-semibold rounded-lg shadow-lg"
+            >
+              <a href="/pages/contacts.html">Butuh Bantuan?</a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      class="relative min-h-[60vh] flex items-center pt-20 sm:pt-24 pb-12 overflow-hidden"
+    >
+      <!-- Animated Background -->
+      <div class="absolute inset-0 -z-10">
+        <div
+          class="absolute top-20 left-10 w-72 h-72 bg-brand-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float"
+        ></div>
+        <div
+          class="absolute top-40 right-10 w-72 h-72 bg-brand-teal-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float"
+          style="animation-delay: 2s"
+        ></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <div class="text-center" data-aos="fade-up">
+          <div
+            class="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-brand-purple-100 to-brand-teal-100 rounded-full border border-brand-purple-200 mb-6"
+          >
+            <svg
+              class="w-5 h-5 text-brand-purple-600"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+              />
+            </svg>
+            <span class="text-sm font-semibold text-brand-purple-700"
+              >Pusat Pembelajaran Interaktif</span
+            >
+          </div>
+          <h1
+            class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6 leading-tight"
+          >
+            Pelajari Tentang <br />
+            <span class="gradient-text">Hak-Hakmu</span>
+          </h1>
+          <p
+            class="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
+          >
+            Dapatkan pengetahuan tentang dampak pernikahan anak, hak-hak remaja,
+            dan cara melindungi diri dari tekanan sosial.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Tabs -->
+    <section class="py-16 sm:py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12" data-aos="fade-up">
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-black mb-4">
+            Materi <span class="gradient-text">Edukasi</span>
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Pilih kategori pembelajaran yang ingin kamu pelajari
+          </p>
+        </div>
+
+        <!-- Tab Navigation -->
+        <div
+          class="flex flex-wrap justify-center gap-2 mb-8"
+          data-aos="fade-up"
+        >
+          <button
+            class="tab-btn px-6 py-3 bg-gradient-to-r from-brand-purple-600 to-brand-purple-700 text-white font-semibold rounded-xl shadow-lg hover:scale-105 transition-all"
+            data-tab="videos"
+          >
+            <div class="flex items-center gap-2">
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+              Video Edukasi
+            </div>
+          </button>
+          <button
+            class="tab-btn px-6 py-3 bg-gray-200 text-gray-700 font-semibold rounded-xl hover:bg-gray-300 transition-all"
+            data-tab="infographics"
+          >
+            <div class="flex items-center gap-2">
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                />
+              </svg>
+              Infografis
+            </div>
+          </button>
+          <button
+            class="tab-btn px-6 py-3 bg-gray-200 text-gray-700 font-semibold rounded-xl hover:bg-gray-300 transition-all"
+            data-tab="articles"
+          >
+            <div class="flex items-center gap-2">
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                />
+              </svg>
+              Artikel
+            </div>
+          </button>
+          <button
+            class="tab-btn px-6 py-3 bg-gray-200 text-gray-700 font-semibold rounded-xl hover:bg-gray-300 transition-all"
+            data-tab="quiz"
+          >
+            <div class="flex items-center gap-2">
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"
+                />
+              </svg>
+              Kuis Interaktif
+            </div>
+          </button>
+        </div>
+
+        <!-- Tab Content -->
+        <!-- Videos Tab -->
+        <div id="videos" class="tab-content active">
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Video 1 -->
+            <div
+              class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover-lift"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="video-container">
+                <iframe
+                  src="https://www.youtube.com/embed/ZQ66dQAh_7c"
+                  title="Dampak Pernikahan Anak"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-gray-800 mb-2">
+                  Dampak Pernikahan Anak
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  Pelajari dampak negatif pernikahan anak terhadap kesehatan,
+                  pendidikan, dan masa depan remaja.
+                </p>
+                <div class="flex items-center gap-4 text-sm text-gray-500">
+                  <div class="flex items-center gap-1">
+                    <svg
+                      class="w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                    <span>2 menit</span>
+                  </div>
+                  <div class="flex items-center gap-1">
+                    <svg
+                      class="w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                      />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                      />
+                    </svg>
+                    <span>555 views</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Video 2 -->
+            <div
+              class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover-lift"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="video-container">
+                <iframe
+                  src="https://www.youtube.com/embed/DyDOHSmMce8"
+                  title="Hak-Hak Remaja"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-gray-800 mb-2">
+                  Hak-Hak Remaja
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  Kenali hak-hakmu sebagai remaja untuk melindungi diri dari
+                  pernikahan dini dan tekanan sosial.
+                </p>
+                <div class="flex items-center gap-4 text-sm text-gray-500">
+                  <div class="flex items-center gap-1">
+                    <svg
+                      class="w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                    <span>3 menit</span>
+                  </div>
+                  <div class="flex items-center gap-1">
+                    <svg
+                      class="w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                      />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                      />
+                    </svg>
+                    <span>326 views</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Video 3 -->
+            <div
+              class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover-lift"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="video-container">
+                <iframe
+                  src="https://www.youtube.com/embed/OqVBACUrDKI"
+                  title="Cara Menolak dengan Sopan"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-gray-800 mb-2">
+                  Hubungan Sehat dimulai dari Siap
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  Sebelum nikah, pastikan kamu dan dia udah siap jalan bareng.
+                </p>
+                <div class="flex items-center gap-4 text-sm text-gray-500">
+                  <div class="flex items-center gap-1">
+                    <svg
+                      class="w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                    <span>51 menit</span>
+                  </div>
+                  <div class="flex items-center gap-1">
+                    <svg
+                      class="w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                      />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                      />
+                    </svg>
+                    <span>81K views</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Infographics Tab -->
+        <div id="infographics" class="tab-content">
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Infographic 1 -->
+            <div
+              class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover-lift"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <img
+                src="https://picsum.photos/seed/infographic1/600/400.jpg"
+                alt="Statistik Pernikahan Anak"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-gray-800 mb-2">
+                  Statistik Pernikahan Anak di Indonesia
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  Data dan fakta tentang prevalensi pernikahan anak di Indonesia
+                  dan dampaknya terhadap pembangunan.
+                </p>
+                <a
+                  href="https://www.unicef.org/indonesia/media/2826/file/Perkawinan-Anak-Factsheet-2020.pdf"
+                >
+                  <button
+                    class="text-brand-purple-600 font-semibold hover:text-brand-purple-700 transition-colors"
+                  >
+                    Lihat Infografis →
+                  </button>
+                </a>
+              </div>
+            </div>
+
+            <!-- Infographic 2 -->
+            <div
+              class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover-lift"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <img
+                src="https://picsum.photos/seed/infographic2/600/400.jpg"
+                alt="Dampak Kesehatan"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-gray-800 mb-2">
+                  Dampak Kesehatan Pernikahan Anak
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  Risiko kesehatan fisik dan mental yang dihadapi anak-anak yang
+                  menikah di usia dini.
+                </p>
+                <a
+                  href="https://cms.indonesiabaik.id/storage/post/conversions/1970/post-1255-0711_Hindari-Dampak-Buruk-Perkawinan-Usia-Anak_KBP-webp_conversion.webp"
+                >
+                  <button
+                    class="text-brand-purple-600 font-semibold hover:text-brand-purple-700 transition-colors"
+                  >
+                    Lihat Infografis →
+                  </button>
+                </a>
+              </div>
+            </div>
+
+            <!-- Infographic 3 -->
+            <div
+              class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover-lift"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <img
+                src="https://picsum.photos/seed/infographic3/600/400.jpg"
+                alt="Hukum Perlindungan Anak"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-gray-800 mb-2">
+                  Hukum Perlindungan Anak
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  Undang-undang dan regulasi yang melindungi anak dari
+                  pernikahan dini di Indonesia.
+                </p>
+                <a
+                  href="https://balitbangda.lampungprov.go.id/berkas/uploads/U06mTAFNYnjlfjMpoeYYbn4OrzsqyqnbjAc1SK0p.png"
+                >
+                  <button
+                    class="text-brand-purple-600 font-semibold hover:text-brand-purple-700 transition-colors"
+                  >
+                    Lihat Infografis →
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Articles Tab -->
+        <div id="articles" class="tab-content">
+          <div class="space-y-6">
+            <!-- Article 1 -->
+            <div
+              class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover-lift"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="flex flex-col md:flex-row gap-6">
+                <img
+                  src="https://picsum.photos/seed/article1/300/200.jpg"
+                  alt="Mengenal Hak-Hak Remaja"
+                  class="w-full md:w-48 h-48 object-cover rounded-xl"
+                />
+                <div class="flex-1">
+                  <div class="flex items-center gap-2 mb-2">
+                    <span
+                      class="px-3 py-1 bg-brand-purple-100 text-brand-purple-700 text-xs font-semibold rounded-full"
+                    >
+                      Hak Asasi
+                    </span>
+                    <span class="text-gray-500 text-sm">5 menit baca</span>
+                  </div>
+                  <h3 class="text-xl font-bold text-gray-800 mb-2">
+                    Mengenal Hak-Hak Remaja untuk Melindungi Diri dari
+                    Pernikahan Dini
+                  </h3>
+                  <p class="text-gray-600 mb-4">
+                    Setiap remaja memiliki hak untuk menentukan masa depannya
+                    sendiri, termasuk hak untuk menolak pernikahan dini. Artikel
+                    ini membahas hak-hak yang dilindungi oleh undang-undang dan
+                    cara memperjuangkannya.
+                  </p>
+                  <a
+                    href="https://ykp.or.id/pembangunan-anak-muda-dalam-upaya-pencegahan-pernikahan-usia-anak/"
+                  >
+                    <button
+                      class="text-brand-purple-600 font-semibold hover:text-brand-purple-700 transition-colors"
+                    >
+                      Baca Selengkapnya →
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Article 2 -->
+            <div
+              class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover-lift"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="flex flex-col md:flex-row gap-6">
+                <img
+                  src="https://picsum.photos/seed/article2/300/200.jpg"
+                  alt="Dampak Pendidikan"
+                  class="w-full md:w-48 h-48 object-cover rounded-xl"
+                />
+                <div class="flex-1">
+                  <div class="flex items-center gap-2 mb-2">
+                    <span
+                      class="px-3 py-1 bg-brand-teal-100 text-brand-teal-700 text-xs font-semibold rounded-full"
+                    >
+                      Pendidikan
+                    </span>
+                    <span class="text-gray-500 text-sm">7 menit baca</span>
+                  </div>
+                  <h3 class="text-xl font-bold text-gray-800 mb-2">
+                    Dampak Pernikahan Dini terhadap Pendidikan dan Masa Depan
+                  </h3>
+                  <p class="text-gray-600 mb-4">
+                    Pernikahan dini seringkali mengakhiri pendidikan remaja,
+                    yang berdampak pada peluang karir dan kemandirian ekonomi di
+                    masa depan. Pelajari bagaimana pernikahan dini membatasi
+                    potensi remaja.
+                  </p>
+                  <a href="https://idscipub.com/dampak-pernikahan-dini/">
+                    <button
+                      class="text-brand-purple-600 font-semibold hover:text-brand-purple-700 transition-colors"
+                    >
+                      Baca Selengkapnya →
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Article 3 -->
+            <div
+              class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover-lift"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="flex flex-col md:flex-row gap-6">
+                <img
+                  src="https://picsum.photos/seed/article3/300/200.jpg"
+                  alt="Membangun Support System"
+                  class="w-full md:w-48 h-48 object-cover rounded-xl"
+                />
+                <div class="flex-1">
+                  <div class="flex items-center gap-2 mb-2">
+                    <span
+                      class="px-3 py-1 bg-pink-100 text-pink-700 text-xs font-semibold rounded-full"
+                    >
+                      Support System
+                    </span>
+                    <span class="text-gray-500 text-sm">6 menit baca</span>
+                  </div>
+                  <h3 class="text-xl font-bold text-gray-800 mb-2">
+                    Membangun Support System untuk Melawan Tekanan Pernikahan
+                    Dini
+                  </h3>
+                  <p class="text-gray-600 mb-4">
+                    Memiliki sistem pendukung yang kuat sangat penting untuk
+                    melawan tekanan pernikahan dini. Artikel ini membahas cara
+                    membangun dan memanfaatkan support system di sekitarmu.
+                  </p>
+                  <a href="https://ppa-dp3appkb.surabaya.go.id/artikel/214">
+                    <button
+                      class="text-brand-purple-600 font-semibold hover:text-brand-purple-700 transition-colors"
+                    >
+                      Baca Selengkapnya →
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quiz Tab -->
+        <div id="quiz" class="tab-content">
+          <div class="max-w-3xl mx-auto">
+            <div
+              class="bg-white rounded-2xl p-6 md:p-8 shadow-lg border border-gray-100"
+              data-aos="fade-up"
+            >
+              <div class="mb-6">
+                <div class="flex items-center justify-between mb-4">
+                  <h3 class="text-2xl font-bold text-gray-800">
+                    Kuis: Seberapa Banyak Kamu Tahu?
+                  </h3>
+                  <div class="flex items-center gap-2">
+                    <span class="text-sm text-gray-600">Skor:</span>
+                    <span
+                      id="quizScore"
+                      class="text-2xl font-bold text-brand-purple-600"
+                      >0</span
+                    >
+                  </div>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-3 mb-6">
+                  <div
+                    id="quizProgress"
+                    class="bg-gradient-to-r from-brand-purple-600 to-brand-teal-500 h-3 rounded-full"
+                    style="width: 20%"
+                  ></div>
+                </div>
+              </div>
+
+              <!-- Question 1 -->
+              <div id="question1" class="quiz-question">
+                <div class="mb-4">
+                  <span class="text-sm font-semibold text-brand-purple-600"
+                    >Pertanyaan 1 dari 5</span
+                  >
+                  <h4 class="text-lg font-bold text-gray-800 mt-1">
+                    Berapa usia minimal legal untuk menikah di Indonesia menurut
+                    UU Perkawinan?
+                  </h4>
+                </div>
+                <div class="space-y-3">
+                  <button
+                    class="quiz-option w-full text-left p-4 border-2 border-gray-200 rounded-xl hover:border-brand-purple-300 transition-all"
+                    data-answer="false"
+                  >
+                    16 tahun untuk perempuan, 19 tahun untuk laki-laki
+                  </button>
+                  <button
+                    class="quiz-option w-full text-left p-4 border-2 border-gray-200 rounded-xl hover:border-brand-purple-300 transition-all"
+                    data-answer="true"
+                  >
+                    19 tahun untuk perempuan dan laki-laki
+                  </button>
+                  <button
+                    class="quiz-option w-full text-left p-4 border-2 border-gray-200 rounded-xl hover:border-brand-purple-300 transition-all"
+                    data-answer="false"
+                  >
+                    18 tahun untuk perempuan, 21 tahun untuk laki-laki
+                  </button>
+                  <button
+                    class="quiz-option w-full text-left p-4 border-2 border-gray-200 rounded-xl hover:border-brand-purple-300 transition-all"
+                    data-answer="false"
+                  >
+                    21 tahun untuk perempuan dan laki-laki
+                  </button>
+                </div>
+                <div id="feedback1" class="mt-4 p-4 rounded-xl hidden">
+                  <p class="font-semibold"></p>
+                  <p class="text-sm mt-1"></p>
+                </div>
+                <button
+                  id="next1"
+                  class="mt-4 px-6 py-3 bg-gradient-to-r from-brand-purple-600 to-brand-purple-700 text-white font-semibold rounded-xl hover:from-brand-purple-700 hover:to-brand-purple-800 transition-all shadow-lg hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
+                  disabled
+                >
+                  Lanjut →
+                </button>
+              </div>
+
+              <!-- Question 2 (Hidden by default) -->
+              <div id="question2" class="quiz-question hidden">
+                <div class="mb-4">
+                  <span class="text-sm font-semibold text-brand-purple-600"
+                    >Pertanyaan 2 dari 5</span
+                  >
+                  <h4 class="text-lg font-bold text-gray-800 mt-1">
+                    Apa dampak kesehatan paling umum pada perempuan yang menikah
+                    di usia dini?
+                  </h4>
+                </div>
+                <div class="space-y-3">
+                  <button
+                    class="quiz-option w-full text-left p-4 border-2 border-gray-200 rounded-xl hover:border-brand-purple-300 transition-all"
+                    data-answer="false"
+                  >
+                    Gangguan penglihatan
+                  </button>
+                  <button
+                    class="quiz-option w-full text-left p-4 border-2 border-gray-200 rounded-xl hover:border-brand-purple-300 transition-all"
+                    data-answer="true"
+                  >
+                    Komplikasi kehamilan dan persalinan
+                  </button>
+                  <button
+                    class="quiz-option w-full text-left p-4 border-2 border-gray-200 rounded-xl hover:border-brand-purple-300 transition-all"
+                    data-answer="false"
+                  >
+                    Penyakit kulit
+                  </button>
+                  <button
+                    class="quiz-option w-full text-left p-4 border-2 border-gray-200 rounded-xl hover:border-brand-purple-300 transition-all"
+                    data-answer="false"
+                  >
+                    Gangguan pendengaran
+                  </button>
+                </div>
+                <div id="feedback2" class="mt-4 p-4 rounded-xl hidden">
+                  <p class="font-semibold"></p>
+                  <p class="text-sm mt-1"></p>
+                </div>
+                <div class="flex gap-3 mt-4">
+                  <button
+                    id="prev2"
+                    class="px-6 py-3 bg-gray-200 text-gray-700 font-semibold rounded-xl hover:bg-gray-300 transition-all"
+                  >
+                    ← Kembali
+                  </button>
+                  <button
+                    id="next2"
+                    class="px-6 py-3 bg-gradient-to-r from-brand-purple-600 to-brand-purple-700 text-white font-semibold rounded-xl hover:from-brand-purple-700 hover:to-brand-purple-800 transition-all shadow-lg hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
+                    disabled
+                  >
+                    Lanjut →
+                  </button>
+                </div>
+              </div>
+
+              <!-- Question 3 (Hidden by default) -->
+              <div id="question3" class="quiz-question hidden">
+                <div class="mb-4">
+                  <span class="text-sm font-semibold text-brand-purple-600"
+                    >Pertanyaan 3 dari 5</span
+                  >
+                  <h4 class="text-lg font-bold text-gray-800 mt-1">
+                    Apa hak anak yang paling sering dilanggar dalam kasus
+                    pernikahan dini?
+                  </h4>
+                </div>
+                <div class="space-y-3">
+                  <button
+                    class="quiz-option w-full text-left p-4 border-2 border-gray-200 rounded-xl hover:border-brand-purple-300 transition-all"
+                    data-answer="false"
+                  >
+                    Hak bermain
+                  </button>
+                  <button
+                    class="quiz-option w-full text-left p-4 border-2 border-gray-200 rounded-xl hover:border-brand-purple-300 transition-all"
+                    data-answer="true"
+                  >
+                    Hak untuk mendapatkan pendidikan
+                  </button>
+                  <button
+                    class="quiz-option w-full text-left p-4 border-2 border-gray-200 rounded-xl hover:border-brand-purple-300 transition-all"
+                    data-answer="false"
+                  >
+                    Hak untuk memiliki nama
+                  </button>
+                  <button
+                    class="quiz-option w-full text-left p-4 border-2 border-gray-200 rounded-xl hover:border-brand-purple-300 transition-all"
+                    data-answer="false"
+                  >
+                    Hak untuk mendapatkan pakaian
+                  </button>
+                </div>
+                <div id="feedback3" class="mt-4 p-4 rounded-xl hidden">
+                  <p class="font-semibold"></p>
+                  <p class="text-sm mt-1"></p>
+                </div>
+                <div class="flex gap-3 mt-4">
+                  <button
+                    id="prev3"
+                    class="px-6 py-3 bg-gray-200 text-gray-700 font-semibold rounded-xl hover:bg-gray-300 transition-all"
+                  >
+                    ← Kembali
+                  </button>
+                  <button
+                    id="next3"
+                    class="px-6 py-3 bg-gradient-to-r from-brand-purple-600 to-brand-purple-700 text-white font-semibold rounded-xl hover:from-brand-purple-700 hover:to-brand-purple-800 transition-all shadow-lg hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
+                    disabled
+                  >
+                    Lanjut →
+                  </button>
+                </div>
+              </div>
+
+              <!-- Question 4 (Hidden by default) -->
+              <div id="question4" class="quiz-question hidden">
+                <div class="mb-4">
+                  <span class="text-sm font-semibold text-brand-purple-600"
+                    >Pertanyaan 4 dari 5</span
+                  >
+                  <h4 class="text-lg font-bold text-gray-800 mt-1">
+                    Lembaga mana yang bisa membantu remaja yang menghadapi
+                    paksaan pernikahan?
+                  </h4>
+                </div>
+                <div class="space-y-3">
+                  <button
+                    class="quiz-option w-full text-left p-4 border-2 border-gray-200 rounded-xl hover:border-brand-purple-300 transition-all"
+                    data-answer="false"
+                  >
+                    Polisi saja
+                  </button>
+                  <button
+                    class="quiz-option w-full text-left p-4 border-2 border-gray-200 rounded-xl hover:border-brand-purple-300 transition-all"
+                    data-answer="true"
+                  >
+                    Komnas Perempuan, LBH, dan DP3AK
+                  </button>
+                  <button
+                    class="quiz-option w-full text-left p-4 border-2 border-gray-200 rounded-xl hover:border-brand-purple-300 transition-all"
+                    data-answer="false"
+                  >
+                    Sekolah saja
+                  </button>
+                  <button
+                    class="quiz-option w-full text-left p-4 border-2 border-gray-200 rounded-xl hover:border-brand-purple-300 transition-all"
+                    data-answer="false"
+                  >
+                    > Tidak ada lembaga yang bisa membantu
+                  </button>
+                </div>
+                <div id="feedback4" class="mt-4 p-4 rounded-xl hidden">
+                  <p class="font-semibold"></p>
+                  <p class="text-sm mt-1"></p>
+                </div>
+                <div class="flex gap-3 mt-4">
+                  <button
+                    id="prev4"
+                    class="px-6 py-3 bg-gray-200 text-gray-700 font-semibold rounded-xl hover:bg-gray-300 transition-all"
+                  >
+                    ← Kembali
+                  </button>
+                  <button
+                    id="next4"
+                    class="px-6 py-3 bg-gradient-to-r from-brand-purple-600 to-brand-purple-700 text-white font-semibold rounded-xl hover:from-brand-purple-700 hover:to-brand-purple-800 transition-all shadow-lg hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
+                    disabled
+                  >
+                    Lanjut →
+                  </button>
+                </div>
+              </div>
+
+              <!-- Question 5 (Hidden by default) -->
+              <div id="question5" class="quiz-question hidden">
+                <div class="mb-4">
+                  <span class="text-sm font-semibold text-brand-purple-600"
+                    >Pertanyaan 5 dari 5</span
+                  >
+                  <h4 class="text-lg font-bold text-gray-800 mt-1">
+                    Apa yang harus kamu lakukan jika merasa tertekan untuk
+                    menikah dini?
+                  </h4>
+                </div>
+                <div class="space-y-3">
+                  <button
+                    class="quiz-option w-full text-left p-4 border-2 border-gray-200 rounded-xl hover:border-brand-purple-300 transition-all"
+                    data-answer="false"
+                  >
+                    Menuruti keinginan keluarga untuk menghindari konflik
+                  </button>
+                  <button
+                    class="quiz-option w-full text-left p-4 border-2 border-gray-200 rounded-xl hover:border-brand-purple-300 transition-all"
+                    data-answer="true"
+                  >
+                    Mencari bantuan dari orang dewasa yang dipercaya atau
+                    lembaga perlindungan anak
+                  </button>
+                  <button
+                    class="quiz-option w-full text-left p-4 border-2 border-gray-200 rounded-xl hover:border-brand-purple-300 transition-all"
+                    data-answer="false"
+                  >
+                    Kabur dari rumah
+                  </button>
+                  <button
+                    class="quiz-option w-full text-left p-4 border-2 border-gray-200 rounded-xl hover:border-brand-purple-300 transition-all"
+                    data-answer="false"
+                  >
+                    Menyembunyikan perasaan dan tidak berbicara dengan siapa pun
+                  </button>
+                </div>
+                <div id="feedback5" class="mt-4 p-4 rounded-xl hidden">
+                  <p class="font-semibold"></p>
+                  <p class="text-sm mt-1"></p>
+                </div>
+                <div class="flex gap-3 mt-4">
+                  <button
+                    id="prev5"
+                    class="px-6 py-3 bg-gray-200 text-gray-700 font-semibold rounded-xl hover:bg-gray-300 transition-all"
+                  >
+                    ← Kembali
+                  </button>
+                  <button
+                    id="finishQuiz"
+                    class="px-6 py-3 bg-gradient-to-r from-brand-teal-600 to-brand-teal-700 text-white font-semibold rounded-xl hover:from-brand-teal-700 hover:to-brand-teal-800 transition-all shadow-lg hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
+                    disabled
+                  >
+                    Selesaikan Kuis
+                  </button>
+                </div>
+              </div>
+
+              <!-- Quiz Results (Hidden by default) -->
+              <div id="quizResults" class="hidden">
+                <div class="text-center mb-6">
+                  <div
+                    class="w-20 h-20 bg-gradient-to-br from-brand-purple-500 to-brand-teal-500 rounded-full flex items-center justify-center mx-auto mb-4"
+                  >
+                    <svg
+                      class="w-10 h-10 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                  </div>
+                  <h3 class="text-2xl font-bold text-gray-800 mb-2">
+                    Kuis Selesai!
+                  </h3>
+                  <p class="text-gray-600 mb-4">Skor Akhir Kamu:</p>
+                  <div class="text-5xl font-black gradient-text mb-4">
+                    <span id="finalScore">0</span>/5
+                  </div>
+                  <p id="scoreMessage" class="text-lg text-gray-700 mb-6"></p>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-3">
+                  <button
+                    id="retryQuiz"
+                    class="flex-1 px-6 py-3 bg-gradient-to-r from-brand-purple-600 to-brand-purple-700 text-white font-semibold rounded-xl hover:from-brand-purple-700 hover:to-brand-purple-800 transition-all shadow-lg hover:scale-105"
+                  >
+                    Ulangi Kuis
+                  </button>
+                  <a
+                    href="/pages/contacts.html"
+                    class="flex-1 px-6 py-3 bg-gradient-to-r from-brand-teal-600 to-brand-teal-700 text-white font-semibold rounded-xl hover:from-brand-teal-700 hover:to-brand-teal-800 transition-all shadow-lg hover:scale-105 text-center"
+                  >
+                    Butuh Bantuan?
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section
+      class="py-16 sm:py-20 bg-gradient-to-br from-brand-purple-600 via-brand-purple-700 to-brand-teal-600 relative overflow-hidden"
+    >
+      <!-- Decorative elements -->
+      <div class="absolute inset-0 opacity-10">
+        <div
+          class="absolute top-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl"
+        ></div>
+        <div
+          class="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"
+        ></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center" data-aos="fade-up">
+          <h2
+            class="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-4 sm:mb-6 leading-tight"
+          >
+            Butuh Bantuan? <br />
+            <span class="text-brand-teal-300">Kami Siap Membantu</span>
+          </h2>
+          <p
+            class="text-lg sm:text-xl text-brand-purple-100 mb-6 sm:mb-10 max-w-3xl mx-auto leading-relaxed"
+          >
+            Jangan ragu menghubungi kami. Semua percakapan 100% rahasia dan
+            anonim. Tim kami siap mendampingimu.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/pages/chatbot.html"
+              class="inline-flex items-center justify-center gap-2 px-8 sm:px-10 py-4 sm:py-5 bg-white text-brand-purple-600 font-bold rounded-xl hover:bg-brand-purple-50 transition-all duration-300 shadow-2xl hover:scale-105 text-base sm:text-lg"
+            >
+              <svg
+                class="w-5 h-5 sm:w-6 sm:h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+                />
+              </svg>
+              Mulai Chat Sekarang
+            </a>
+            <a
+              href="/pages/contacts.html"
+              class="inline-flex items-center justify-center gap-2 px-8 sm:px-10 py-4 sm:py-5 bg-transparent text-white font-bold rounded-xl border-2 border-white hover:bg-white/10 transition-all duration-300 shadow-2xl hover:scale-105 text-base sm:text-lg"
+            >
+              <svg
+                class="w-5 h-5 sm:w-6 sm:h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                />
+              </svg>
+              Lihat Kontak Bantuan
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-gray-300"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 mb-8 sm:mb-12"
+        >
+          <!-- Brand Column -->
+          <div class="lg:col-span-1">
+            <div class="flex items-center gap-3 mb-4 sm:mb-6">
+              <div
+                class="w-10 h-10 bg-gradient-to-br from-brand-purple-600 to-brand-teal-500 rounded-xl flex items-center justify-center shadow-lg"
+              >
+                <svg
+                  class="w-6 h-6 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                  />
+                </svg>
+              </div>
+              <span class="text-2xl font-black gradient-text">SiANAK</span>
+            </div>
+            <p
+              class="text-sm sm:text-base text-gray-400 leading-relaxed mb-4 sm:mb-6"
+            >
+              Platform pencegahan pernikahan anak di Jawa Timur. Melindungi hak
+              remaja untuk menentukan masa depannya sendiri.
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h3 class="text-white font-bold text-base sm:text-lg mb-4 sm:mb-6">
+              Fitur Utama
+            </h3>
+            <ul class="space-y-2 sm:space-y-3 text-sm sm:text-base">
+              <li>
+                <a
+                  href="/pages/risk-assessment.html"
+                  class="hover:text-brand-purple-400 transition-colors hover:translate-x-1 inline-block"
+                  >Cek Risiko</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/pages/chatbot.html"
+                  class="hover:text-brand-purple-400 transition-colors hover:translate-x-1 inline-block"
+                  >Chatbot Anonim</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/pages/contacts.html"
+                  class="hover:text-brand-purple-400 transition-colors hover:translate-x-1 inline-block"
+                  >Kontak Bantuan</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/pages/stories.html"
+                  class="hover:text-brand-purple-400 transition-colors hover:translate-x-1 inline-block"
+                  >Kisah Inspiratif</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Resources -->
+          <div>
+            <h3 class="text-white font-bold text-base sm:text-lg mb-4 sm:mb-6">
+              Sumber Daya
+            </h3>
+            <ul class="space-y-2 sm:space-y-3 text-sm sm:text-base">
+              <li>
+                <a
+                  href="/pages/about.html"
+                  class="hover:text-brand-purple-400 transition-colors hover:translate-x-1 inline-block"
+                  >Tentang Kami</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/pages/faq.html"
+                  class="hover:text-brand-purple-400 transition-colors hover:translate-x-1 inline-block"
+                  >FAQ</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/pages/privacy.html"
+                  class="hover:text-brand-purple-400 transition-colors hover:translate-x-1 inline-block"
+                  >Kebijakan Privasi</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Emergency -->
+          <div>
+            <h3 class="text-white font-bold text-base sm:text-lg mb-4 sm:mb-6">
+              Bantuan Darurat
+            </h3>
+            <div
+              class="bg-status-danger-500/20 border-2 border-status-danger-500 rounded-2xl sm:rounded-3xl p-4 sm:p-6"
+            >
+              <div
+                class="w-10 h-10 sm:w-12 sm:h-12 bg-status-danger-500 rounded-xl flex items-center justify-center mx-auto mb-3"
+              >
+                <svg
+                  class="w-5 h-5 sm:w-6 sm:h-6 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+                  />
+                </svg>
+              </div>
+              <p
+                class="text-xs sm:text-sm text-gray-300 mb-3 sm:mb-4 text-center"
+              >
+                Jika kamu dalam bahaya, hubungi:
+              </p>
+              <a
+                href="tel:+62-21-3903963"
+                class="flex items-center justify-center gap-2 py-2.5 sm:py-3 bg-status-danger-600 hover:bg-status-danger-700 text-white text-sm sm:text-base font-bold rounded-lg transition-all hover:scale-105 shadow-lg mb-2 sm:mb-3"
+              >
+                <svg
+                  class="w-4 h-4 sm:w-5 sm:h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                  />
+                </svg>
+                <span class="break-all">+62-21-3903963</span>
+              </a>
+              <p class="text-xs text-gray-400 text-center">
+                (Komnas Perempuan)
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div
+          class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-6"
+        >
+          <p class="text-gray-400 text-sm text-center md:text-left">
+            © 2025 SiANAK. Dikembangkan dengan kasih sayang untuk masa depan
+            remaja Indonesia.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <span
+              class="px-4 py-2 bg-gray-800 rounded-full text-xs font-semibold flex items-center gap-2"
+            >
+              <svg
+                class="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                />
+              </svg>
+              Privasi Terjamin
+            </span>
+            <span
+              class="px-4 py-2 bg-gray-800 rounded-full text-xs font-semibold flex items-center gap-2"
+            >
+              <svg
+                class="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+              Data Terenkripsi
+            </span>
+            <span
+              class="px-4 py-2 bg-gray-800 rounded-full text-xs font-semibold flex items-center gap-2"
+            >
+              <svg
+                class="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"
+                />
+              </svg>
+              Dukungan 24/7
+            </span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="/assets/js/aos-init.js"></script>
+    <script src="/assets/js/navbar.js"></script>
+    <script src="/assets/js/education.js"></script>
+  </body>
+</html>
