@@ -1,0 +1,158 @@
+{
+  "stories": [
+    {
+      "id": 1,
+      "name": "Anonim",
+      "age": 17,
+      "regency": "Surabaya",
+      "title": "Aku Memilih Pendidikan, Bukan Pernikahan Dini",
+      "story": "Aku adalah anak pertama dari tiga bersaudara. Saat aku kelas 2 SMA, orang tuaku mulai membicarakan pernikahan aku dengan sepupu jauh. Alasannya karena keluarga kami kurang mampu dan mereka berpikir pernikahan akan 'meringankan beban'. Aku sangat sedih dan bingung. Aku masih mau kuliah, punya mimpi menjadi guru. Malam itu, aku menangis dalam pelukan. Kebetulan aku browsing dan menemukan SiANAK. Aku mencoba fitur Cek Risiko dan hasilnya tinggi. Aku juga chat dengan AI-nya dan merasa didengar. Mereka memberiku informasi tentang hak-hakku dan menghubungkan aku dengan LBH Surabaya. Dengan bantuan mereka, aku berani bicara dengan orang tua. Awalnya sulit, tapi akhirnya mereka mengerti. Sekarang aku sudah kuliah semester 3 di jurusan pendidikan. Aku sangat berterima kasih pada SiANAK.",
+      "outcome": "Berhasil melanjutkan kuliah dan orang tua mengerti",
+      "category": "success",
+      "date": "2024-01-15",
+      "readTime": "5 menit",
+      "featured": true
+    },
+    {
+      "id": 2,
+      "name": "Anonim",
+      "age": 16,
+      "regency": "Malang",
+      "title": "Dari Terpojok Hingga Menemukan Jalan Keluar",
+      "story": "Aku tinggal di desa yang masih kental dengan tradisi. Usia 16 tahun, banyak teman seumuranku yang sudah menikah. Keluargaku mulai menjodohkan aku dengan anak tetangga yang 10 tahun lebih tua. Aku merasa mengerikan. Aku takut pada masa depanku. Suatu hari, guru BK di sekolah memperkenalkan SiANAK. Aku mencoba fitur chat anonim dan curhat panjang lebar. AI-nya sangat sabar mendengarkan. Mereka memberiku ide untuk bicara dengan guru BK dan mencari bantuan DP3AK. Dengan dukungan guru, aku menemui DP3AK Malang. Mereka memberikan konseling dan membantukku bicara dengan orang tua. Sekarang, aku fokus belajar untuk masuk PTN. Aku sadar aku punya hak untuk menentukan masa depanku sendiri.",
+      "outcome": "Mendapat bantuan dari DP3AK dan fokus belajar",
+      "category": "success",
+      "date": "2024-02-20",
+      "readTime": "6 menit",
+      "featured": true
+    },
+    {
+      "id": 3,
+      "name": "Anonim",
+      "age": 18,
+      "regency": "Jember",
+      "title": "Menolak Pernikahan Paksa dengan Hukum",
+      "story": "Ayahku sangat keras. Dia sudah menyiapkan segalanya untuk pernikahanku dengan pilihannya. Aku sudah berulang kali menolak tapi tidak pernah didengar. Suatu hari, aku hampir putus asa. Tapi aku ingat teman pernah cerita tentang SiANAK. Aku membuka website dan membaca artikel tentang hukum perlindungan anak. Aku juga menghubungi kontak bantuan di Jember. LBH Jember membantuku memahami hak-hakku. Mereka menemani aku saat bicara dengan ayah. Awalnya ayah marah besar, tapi ketika LBH menjelaskan konsekuensi hukum, dia mengurungkan niatnya. Sekarang hubunganku dengan ayah membaik. Aku bahkan dibantukunya untuk kuliah. Terima kasih SiANAK.",
+      "outcome": "Berhasil membatalkan pernikahan paksa dengan bantuan hukum",
+      "category": "success",
+      "date": "2024-03-10",
+      "readTime": "7 menit",
+      "featured": true
+    },
+    {
+      "id": 4,
+      "name": "Anonim",
+      "age": 15,
+      "regency": "Sidoarjo",
+      "title": "Aku Berani Berkata 'Tidak'",
+      "story": "Aku masih kelas 3 SMP tapi sudah ada yang melamarku. Ibuku sangat senang dan sudah membicarakan persiapan pernikahan. Aku merasa terlalu muda. Aku masih mau main sama teman-teman. Aku bingung bagaimana menolak tanpa menyakiti hati ibu. Aku menemukan SiANAK dari medsos. Aku mencoba fitur edukasi dan belajar cara menolak dengan sopan. Aku juga membaca cerita orang lain yang berhasil. Itu memberiku keberanian. Aku bicara dengan ibuku sambil menangis. Aku jelaskan bahwa aku belum siap dan masih mau sekolah. Ibuku sedih tapi akhirnya mengerti. Sekarang aku fokus belajar untuk masuk SMA favorit.",
+      "outcome": "Berhasil menunda pernikahan dan fokus pada pendidikan",
+      "category": "success",
+      "date": "2024-04-05",
+      "readTime": "4 menit",
+      "featured": false
+    },
+    {
+      "id": 5,
+      "name": "Anonim",
+      "age": 17,
+      "regency": "Mojokerto",
+      "title": "Mimpi Jadi Dokter Masih Terjaga",
+      "story": "Aku bercita-cita jadi dokter sejak kecil. Tapi di usia 17 tahun, keluarga memaksaku menikah dengan pengusaha kaya. Mereka bilang ini kesempatan emas. Aku sangat sedih karena mimpiku akan hancur. Aku curhat di chat SiANAK hampir setiap hari. AI-nya selalu ada untukku. Mereka memberiku informasi beasiswa dan cara menolak dengan argumen logis. Aku juga dihubungkan dengan P2TP2A Mojokerto. Dengan bantuan mereka, aku membuat presentasi tentang dampak pernikahan dini dan rencana masa depanku. Keluargaku terkesan dan akhirnya mendukungku. Sekarang aku sedang mempersiapkan diri untuk tes masuk kedokteran.",
+      "outcome": "Keluarga mendukung mimpi dan fokus persiapan kuliah",
+      "category": "success",
+      "date": "2024-05-12",
+      "readTime": "6 menit",
+      "featured": false
+    },
+    {
+      "id": 6,
+      "name": "Anonim",
+      "age": 16,
+      "regency": "Kediri",
+      "title": "Dari Desa Terpencil Menuju Universitas",
+      "story": "Aku tinggal di desa terpencil di Kediri. Di sini, gadis usiaku kebanyakan sudah menikah. Orang tuaku sudah menyiapkan segalanya. Aku merasa tidak punya pilihan. Sampai suatu hari, ada sosialisasi dari DP3AK Kediri di sekolah. Mereka memperkenalkan SiANAK. Aku langsung coba dan merasa ada harapan. Aku chat dengan AI-nya dan mereka membantuku membuat rencana. Aku menunjukkan pada orang tua dampak buruk pernikahan anak dengan data dan statistik. Aku juga janji akan terus membantu ekonomi keluarga setelah kerja. Mereka akhirnya mengerti. Sekarang aku sudah diterima di universitas negeri di Surabaya.",
+      "outcome": "Diterima di universitas negeri dan orang tua bangga",
+      "category": "success",
+      "date": "2024-06-18",
+      "readTime": "5 menit",
+      "featured": false
+    },
+    {
+      "id": 7,
+      "name": "Anonim",
+      "age": 15,
+      "regency": "Pasuruan",
+      "title": "Aku Menolak Demi Masa Depan Adik-Adikku",
+      "story": "Aku anak pertama dari 5 bersaudara. Ayahku sakit-sakitan dan ekonomi sulit. Ibuku ingin aku menikah dengan orang kaya agar bisa membantu ekonomi. Aku sangat terbebani. Aku mencari informasi dan menemukan SiANAK. Aku belajar bahwa pernikahan dini justru akan memperburuk ekonomi. Aku juga belajar tentang beasiswa untuk anak tidak mampu. Dengan bantuan guru dan SiANAK, aku bicara dengan ibuku. Aku janji akan bekerja keras untuk beasiswa dan membantu adik-adik. Ibuku menangis dan memelukku. Sekarang aku sedang mempersiapkan diri untuk beasiswa.",
+      "outcome": "Fokus belajar untuk beasiswa dan komitmen membantu keluarga",
+      "category": "success",
+      "date": "2024-07-22",
+      "readTime": "6 menit",
+      "featured": false
+    },
+    {
+      "id": 8,
+      "name": "Anonim",
+      "age": 17,
+      "regency": "Probolinggo",
+      "title": "Berjuang demi Cita-cita dan Cinta",
+      "story": "Aku punya pacar dan kami berjanji untuk menikah setelah kuliah. Tapi keluargaku punya rencana lain. Mereka sudah menjodohkan aku dengan orang lain. Aku sangat bingung antara menuruti keluarga atau memegang janji. Aku curhat di SiANAK dan mereka membantuku memahami bahwa aku punya hak untuk memilih. Mereka juga memberiku ide untuk menunjukkan keseriusan pacarku. Kami bersama-sama membuat rencana masa depan yang jelas. Setelah melihat keseriusan kami, keluarga akhirnya menerima. Sekarang kami fokus belajar untuk meraih mimpi bersama.",
+      "outcome": "Keluarga menerima pacar dan fokus meraih mimpi bersama",
+      "category": "success",
+      "date": "2024-08-30",
+      "readTime": "7 menit",
+      "featured": false
+    },
+    {
+      "id": 9,
+      "name": "Anonim",
+      "age": 16,
+      "regency": "Lamongan",
+      "title": "Menemukan Suara di Tengah Tekanan",
+      "story": "Aku anak yang pendiam. Sulit untukku menolak atau berargumen. Ketika keluarga mulai membicarakan pernikahan, aku hanya bisa diam. Aku takut jika aku bicara, mereka akan marah. Aku menemukan SiANAK dan chat dengan AI-nya. Mereka mengajarku cara bicara yang tegas namun sopan. Aku juga latihan dengan teman-teman. Perlahan, aku menjadi lebih percaya diri. Ketika waktu bicara dengan keluarga tiba, aku berhasil menyampaikan pendapatku dengan baik. Mereka kaget tapi mendengarkan. Sekarang aku lebih berani untuk bersuara.",
+      "outcome": "Menjadi lebih percaya diri dan berhasil menyampaikan pendapat",
+      "category": "success",
+      "date": "2024-09-14",
+      "readTime": "5 menit",
+      "featured": false
+    }
+  ],
+  "categories": [
+    {
+      "id": "success",
+      "name": "Kisah Sukses",
+      "description": "Cerita remaja yang berhasil melawan pernikahan dini",
+      "color": "from-brand-teal-500 to-brand-teal-600",
+      "bgColor": "from-brand-teal-50 to-brand-teal-100",
+      "borderColor": "border-brand-teal-200"
+    },
+    {
+      "id": "ongoing",
+      "name": "Perjuangan Berlanjut",
+      "description": "Cerita remaja yang masih dalam perjuangan",
+      "color": "from-brand-purple-500 to-brand-purple-600",
+      "bgColor": "from-brand-purple-50 to-brand-purple-100",
+      "borderColor": "border-brand-purple-200"
+    },
+    {
+      "id": "warning",
+      "name": "Pelajaran Berharga",
+      "description": "Cerita sebagai pelajaran untuk remaja lain",
+      "color": "from-yellow-500 to-yellow-600",
+      "bgColor": "from-yellow-50 to-yellow-100",
+      "borderColor": "border-yellow-200"
+    }
+  ],
+  "regencies": [
+    "Surabaya",
+    "Malang",
+    "Jember",
+    "Sidoarjo",
+    "Mojokerto",
+    "Kediri",
+    "Pasuruan",
+    "Probolinggo",
+    "Lamongan"
+  ]
+}
