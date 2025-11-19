@@ -1,256 +1,1344 @@
 <!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Pertanyaan yang Sering Ditanyakan tentang SiANAK"
+    />
+    <title>FAQ - SiANAK</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
 
-<html class="dark" lang="id"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Detail Konten Budaya</title>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script>
+    <script>
       tailwind.config = {
-        darkMode: "class",
         theme: {
           extend: {
-            colors: {
-              "primary": "#36e27b",
-              "background-light": "#f6f8f7",
-              "background-dark": "#111714",
-            },
             fontFamily: {
-              "display": ["Manrope", "sans-serif"]
+              sans: ["Inter", "sans-serif"],
             },
-            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            colors: {
+              brand: {
+                purple: {
+                  50: "#faf5ff",
+                  100: "#f3e8ff",
+                  200: "#e9d5ff",
+                  300: "#d8b4fe",
+                  400: "#c084fc",
+                  500: "#a855f7",
+                  600: "#9333ea",
+                  700: "#7e22ce",
+                  800: "#6b21a8",
+                  900: "#581c87",
+                },
+                teal: {
+                  50: "#f0fdfa",
+                  100: "#ccfbf1",
+                  200: "#99f6e4",
+                  300: "#5eead4",
+                  400: "#2dd4bf",
+                  500: "#14b8a6",
+                  600: "#0d9488",
+                  700: "#0f766e",
+                  800: "#115e59",
+                  900: "#134e4a",
+                },
+              },
+              status: {
+                danger: {
+                  500: "#ef4444",
+                  600: "#dc2626",
+                  700: "#b91c1c",
+                },
+                warning: {
+                  500: "#f59e0b",
+                  600: "#d97706",
+                },
+                success: {
+                  500: "#10b981",
+                  600: "#059669",
+                },
+              },
+            },
+            spacing: {
+              18: "4.5rem",
+              22: "5.5rem",
+              26: "6.5rem",
+              30: "7.5rem",
+            },
+            borderRadius: {
+              "4xl": "2rem",
+              "5xl": "2.5rem",
+              "6xl": "3rem",
+            },
+            animation: {
+              float: "float 6s ease-in-out infinite",
+              "pulse-glow": "pulse-glow 2s ease-in-out infinite",
+              "slide-up": "slide-up 0.5s ease-out",
+              "scale-in": "scale-in 0.3s ease-out",
+              "fade-in": "fade-in 0.5s ease-out",
+              "bounce-soft": "bounce-soft 2s ease-in-out infinite",
+            },
+            keyframes: {
+              float: {
+                "0%, 100%": { transform: "translateY(0px)" },
+                "50%": { transform: "translateY(-20px)" },
+              },
+              "pulse-glow": {
+                "0%, 100%": { boxShadow: "0 0 20px rgba(168, 85, 247, 0.4)" },
+                "50%": { boxShadow: "0 0 40px rgba(168, 85, 247, 0.8)" },
+              },
+              "slide-up": {
+                "0%": { transform: "translateY(20px)", opacity: "0" },
+                "100%": { transform: "translateY(0)", opacity: "1" },
+              },
+              "scale-in": {
+                "0%": { transform: "scale(0.9)", opacity: "0" },
+                "100%": { transform: "scale(1)", opacity: "1" },
+              },
+              "fade-in": {
+                "0%": { opacity: "0" },
+                "100%": { opacity: "1" },
+              },
+              "bounce-soft": {
+                "0%, 100%": { transform: "translateY(0)" },
+                "50%": { transform: "translateY(-10px)" },
+              },
+            },
+            boxShadow: {
+              "purple-glow": "0 0 20px rgba(147, 51, 234, 0.3)",
+              "purple-glow-lg": "0 0 40px rgba(147, 51, 234, 0.5)",
+              "teal-glow": "0 0 20px rgba(20, 184, 166, 0.3)",
+              "teal-glow-lg": "0 0 40px rgba(20, 184, 166, 0.5)",
+              glass: "0 8px 32px 0 rgba(31, 38, 135, 0.1)",
+            },
+            backdropBlur: {
+              xs: "2px",
+            },
+            backgroundImage: {
+              "gradient-purple": "linear-gradient(135deg, #9333ea, #7e22ce)",
+              "gradient-teal": "linear-gradient(135deg, #14b8a6, #0d9488)",
+              "gradient-brand": "linear-gradient(135deg, #9333ea, #14b8a6)",
+            },
+            maxWidth: {
+              "8xl": "88rem",
+              "9xl": "96rem",
+            },
           },
         },
+      };
+    </script>
+    <style>
+      html,
+      body {
+        overflow-x: hidden;
+        max-width: 100%;
+      }
+
+      .glass-effect {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+      }
+
+      .gradient-text {
+        background: linear-gradient(135deg, #9333ea, #14b8a6);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .hover-lift {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .hover-lift:hover {
+        transform: translateY(-8px);
+      }
+
+      #header {
+        z-index: 9999;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+      }
+
+      #mobileMenuBtn {
+        z-index: 10000;
+        position: relative;
+        background-color: rgba(255, 255, 255, 0.9) !important;
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      #mobileMenuBtn:hover {
+        background-color: rgba(249, 250, 251, 0.95) !important;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      section {
+        width: 100%;
+        overflow-x: hidden;
+      }
+
+      .faq-item {
+        transition: all 0.3s ease;
+      }
+
+      .faq-item.active .faq-answer {
+        max-height: 1000px;
+        opacity: 1;
+        padding-top: 1rem;
+      }
+
+      .faq-answer {
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: all 0.3s ease;
+      }
+
+      .faq-icon {
+        transition: transform 0.3s ease;
+      }
+
+      .faq-item.active .faq-icon {
+        transform: rotate(180deg);
+      }
+    </style>
+  </head>
+
+  <body
+    class="font-sans antialiased bg-gradient-to-br from-brand-purple-50 via-white to-brand-teal-50"
+  >
+    <!-- Navigation -->
+    <header
+      class="fixed top-0 left-0 right-0 z-50 glass-effect border-b border-white/20 transition-all duration-300"
+      id="header"
+    >
+      <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <!-- Logo -->
+          <a href="/index.html" class="flex items-center gap-3 group">
+            <div
+              class="w-10 h-10 bg-gradient-to-br from-brand-purple-600 to-brand-teal-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg"
+            >
+              <svg
+                class="w-6 h-6 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                />
+              </svg>
+            </div>
+            <span class="text-2xl font-black gradient-text">SiANAK</span>
+          </a>
+
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex items-center gap-2">
+            <a
+              href="/index.html"
+              class="px-4 py-2 text-gray-700 hover:text-brand-purple-600 font-medium rounded-lg hover:bg-brand-purple-50/50 transition-all duration-200"
+              >Beranda</a
+            >
+            <a
+              href="/pages/about.html"
+              class="px-4 py-2 text-gray-700 hover:text-brand-purple-600 font-medium rounded-lg hover:bg-brand-purple-50/50 transition-all duration-200"
+              >Tentang Kami</a
+            >
+            <a
+              href="/pages/risk-assessment.html"
+              class="px-4 py-2 text-gray-700 hover:text-brand-purple-600 font-medium rounded-lg hover:bg-brand-purple-50/50 transition-all duration-200"
+              >Cek Risiko</a
+            >
+            <a
+              href="/pages/chatbot.html"
+              class="px-4 py-2 text-gray-700 hover:text-brand-purple-600 font-medium rounded-lg hover:bg-brand-purple-50/50 transition-all duration-200"
+              >Chatbot</a
+            >
+            <a
+              href="/pages/contacts.html"
+              class="px-4 py-2 text-gray-700 hover:text-brand-purple-600 font-medium rounded-lg hover:bg-brand-purple-50/50 transition-all duration-200"
+              >Kontak</a
+            >
+            <a
+              href="/pages/stories.html"
+              class="px-4 py-2 text-gray-700 hover:text-brand-purple-600 font-medium rounded-lg hover:bg-brand-purple-50/50 transition-all duration-200"
+              >Cerita</a
+            >
+          </div>
+
+          <!-- CTA Buttons -->
+          <div class="hidden md:flex items-center gap-3">
+            <a href="/pages/contacts.html">
+              <button
+                class="px-6 py-2.5 bg-gradient-to-r from-brand-purple-600 to-brand-purple-700 text-white font-semibold rounded-lg hover:from-brand-purple-700 hover:to-brand-purple-800 transition-all duration-300 shadow-lg hover:shadow-brand-purple-500/50 hover:scale-105"
+              >
+                Butuh Bantuan?
+              </button>
+            </a>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button
+            id="mobileMenuBtn"
+            class="md:hidden p-2 rounded-lg hover:bg-brand-purple-50 transition-colors"
+          >
+            <svg
+              class="w-6 h-6 text-gray-700"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobileMenu"
+        class="hidden md:hidden glass-effect border-t border-white/20"
+      >
+        <div class="px-4 py-4 space-y-2">
+          <a
+            href="/index.html"
+            class="block px-4 py-3 text-gray-700 hover:text-brand-purple-600 font-medium rounded-lg hover:bg-brand-purple-50 transition-all"
+            >Beranda</a
+          >
+          <a
+            href="/pages/about.html"
+            class="block px-4 py-3 text-gray-700 hover:text-brand-purple-600 font-medium rounded-lg hover:bg-brand-purple-50 transition-all"
+            >Tentang Kami</a
+          >
+          <a
+            href="/pages/risk-assessment.html"
+            class="block px-4 py-3 text-gray-700 hover:text-brand-purple-600 font-medium rounded-lg hover:bg-brand-purple-50 transition-all"
+            >Cek Risiko</a
+          >
+          <a
+            href="/pages/chatbot.html"
+            class="block px-4 py-3 text-gray-700 hover:text-brand-purple-600 font-medium rounded-lg hover:bg-brand-purple-50 transition-all"
+            >Chatbot</a
+          >
+          <a
+            href="/pages/contacts.html"
+            class="block px-4 py-3 text-gray-700 hover:text-brand-purple-600 font-medium rounded-lg hover:bg-brand-purple-50 transition-all"
+            >Kontak</a
+          >
+          <a
+            href="/pages/stories.html"
+            class="block px-4 py-3 text-gray-700 hover:text-brand-purple-600 font-medium rounded-lg hover:bg-brand-purple-50 transition-all"
+            >Cerita</a
+          >
+          <div class="pt-4 space-y-2 border-t border-gray-200">
+            <button
+              class="w-full px-6 py-3 bg-gradient-to-r from-brand-purple-600 to-brand-purple-700 text-white font-semibold rounded-lg shadow-lg"
+            >
+              <a href="/pages/contacts.html">Butuh Bantuan?</a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      class="relative min-h-[60vh] flex items-center pt-20 sm:pt-24 pb-12 overflow-hidden"
+    >
+      <!-- Animated Background -->
+      <div class="absolute inset-0 -z-10">
+        <div
+          class="absolute top-20 left-10 w-72 h-72 bg-brand-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float"
+        ></div>
+        <div
+          class="absolute top-40 right-10 w-72 h-72 bg-brand-teal-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float"
+          style="animation-delay: 2s"
+        ></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <div class="text-center" data-aos="fade-up">
+          <div
+            class="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-brand-purple-100 to-brand-teal-100 rounded-full border border-brand-purple-200 mb-6"
+          >
+            <svg
+              class="w-5 h-5 text-brand-purple-600"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+            <span class="text-sm font-semibold text-brand-purple-700"
+              >Pertanyaan yang Sering Ditanyakan</span
+            >
+          </div>
+          <h1
+            class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6 leading-tight"
+          >
+            Ada Pertanyaan? <br />
+            <span class="gradient-text">Kami Punya Jawaban</span>
+          </h1>
+          <p
+            class="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
+          >
+            Temukan jawaban untuk pertanyaan umum tentang SiANAK, hak-hakmu, dan
+            cara kami bisa membantu
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Categories -->
+    <section class="py-16 sm:py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12" data-aos="fade-up">
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-black mb-4">
+            Kategori <span class="gradient-text">Pertanyaan</span>
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Pilih kategori untuk menemukan jawaban yang kamu cari
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+          <!-- Category 1 -->
+          <a
+            href="#platform"
+            class="group relative hover-lift"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div
+              class="absolute inset-0 bg-gradient-to-br from-brand-purple-400 to-brand-purple-600 rounded-3xl blur-lg opacity-0 group-hover:opacity-20 transition-opacity"
+            ></div>
+            <div
+              class="relative bg-white rounded-3xl p-6 shadow-lg border border-gray-100 text-center"
+            >
+              <div
+                class="w-16 h-16 bg-gradient-to-br from-brand-purple-500 to-brand-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform shadow-lg"
+              >
+                <svg
+                  class="w-8 h-8 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">
+                Tentang Platform
+              </h3>
+              <p class="text-sm text-gray-600">
+                Fitur, keamanan, dan cara menggunakan
+              </p>
+            </div>
+          </a>
+
+          <!-- Category 2 -->
+          <a
+            href="#rights"
+            class="group relative hover-lift"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div
+              class="absolute inset-0 bg-gradient-to-br from-brand-teal-400 to-brand-teal-600 rounded-3xl blur-lg opacity-0 group-hover:opacity-20 transition-opacity"
+            ></div>
+            <div
+              class="relative bg-white rounded-3xl p-6 shadow-lg border border-gray-100 text-center"
+            >
+              <div
+                class="w-16 h-16 bg-gradient-to-br from-brand-teal-500 to-brand-teal-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform shadow-lg"
+              >
+                <svg
+                  class="w-8 h-8 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">Hak Remaja</h3>
+              <p class="text-sm text-gray-600">
+                Hukum dan hak-hak yang melindungimu
+              </p>
+            </div>
+          </a>
+
+          <!-- Category 3 -->
+          <a
+            href="#help"
+            class="group relative hover-lift"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div
+              class="absolute inset-0 bg-gradient-to-br from-pink-400 to-pink-600 rounded-3xl blur-lg opacity-0 group-hover:opacity-20 transition-opacity"
+            ></div>
+            <div
+              class="relative bg-white rounded-3xl p-6 shadow-lg border border-gray-100 text-center"
+            >
+              <div
+                class="w-16 h-16 bg-gradient-to-br from-pink-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform shadow-lg"
+              >
+                <svg
+                  class="w-8 h-8 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-lg font-bold text-gray-800 mb-2">
+                Mendapat Bantuan
+              </h3>
+              <p class="text-sm text-gray-600">
+                Cara mencari dan mendapatkan dukungan
+              </p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Platform FAQs -->
+        <div id="platform" class="mb-16" data-aos="fade-up">
+          <h3
+            class="text-2xl sm:text-3xl font-black mb-6 flex items-center gap-3"
+          >
+            <div
+              class="w-10 h-10 bg-gradient-to-br from-brand-purple-500 to-brand-purple-600 rounded-xl flex items-center justify-center"
+            >
+              <svg
+                class="w-6 h-6 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                />
+              </svg>
+            </div>
+            Tentang Platform
+          </h3>
+
+          <div class="space-y-4">
+            <!-- FAQ Item -->
+            <div
+              class="faq-item bg-white rounded-2xl p-6 shadow-lg border border-gray-100 cursor-pointer"
+              onclick="toggleFaq(this)"
+            >
+              <div class="flex items-center justify-between">
+                <h4 class="text-lg font-bold text-gray-800 flex-1 pr-4">
+                  Apa itu SiANAK?
+                </h4>
+                <svg
+                  class="faq-icon w-6 h-6 text-brand-purple-600 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </div>
+              <div class="faq-answer text-gray-600 leading-relaxed">
+                SiANAK adalah platform digital yang dirancang khusus untuk
+                mencegah pernikahan anak di Jawa Timur. Kami menyediakan
+                berbagai fitur seperti assessment risiko, chatbot anonim, kontak
+                bantuan, edukasi, dan kisah inspiratif untuk membantu remaja
+                melindungi hak-hak mereka dan membuat keputusan terbaik untuk
+                masa depan.
+              </div>
+            </div>
+
+            <!-- FAQ Item -->
+            <div
+              class="faq-item bg-white rounded-2xl p-6 shadow-lg border border-gray-100 cursor-pointer"
+              onclick="toggleFaq(this)"
+            >
+              <div class="flex items-center justify-between">
+                <h4 class="text-lg font-bold text-gray-800 flex-1 pr-4">
+                  Apakah menggunakan SiANAK benar-benar anonim?
+                </h4>
+                <svg
+                  class="faq-icon w-6 h-6 text-brand-purple-600 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </div>
+              <div class="faq-answer text-gray-600 leading-relaxed">
+                Ya, 100% anonim. Kami tidak menyimpan data pribadi Anda, tidak
+                menggunakan cookies pelacakan, dan semua percakapan di chatbot
+                dienkripsi end-to-end. Identitas Anda tidak akan pernah
+                diketahui oleh siapa pun, termasuk tim kami.
+              </div>
+            </div>
+
+            <!-- FAQ Item -->
+            <div
+              class="faq-item bg-white rounded-2xl p-6 shadow-lg border border-gray-100 cursor-pointer"
+              onclick="toggleFaq(this)"
+            >
+              <div class="flex items-center justify-between">
+                <h4 class="text-lg font-bold text-gray-800 flex-1 pr-4">
+                  Apakah SiANAK tersedia di seluruh Indonesia?
+                </h4>
+                <svg
+                  class="faq-icon w-6 h-6 text-brand-purple-600 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </div>
+              <div class="faq-answer text-gray-600 leading-relaxed">
+                Saat ini, SiANAK fokus pada wilayah Jawa Timur, namun kami
+                berencana untuk ekspansi ke seluruh Indonesia. Namun, fitur
+                edukasi dan informasi kami dapat diakses oleh siapa saja di
+                seluruh Indonesia.
+              </div>
+            </div>
+
+            <!-- FAQ Item -->
+            <div
+              class="faq-item bg-white rounded-2xl p-6 shadow-lg border border-gray-100 cursor-pointer"
+              onclick="toggleFaq(this)"
+            >
+              <div class="flex items-center justify-between">
+                <h4 class="text-lg font-bold text-gray-800 flex-1 pr-4">
+                  Apakah SiANAK gratis?
+                </h4>
+                <svg
+                  class="faq-icon w-6 h-6 text-brand-purple-600 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </div>
+              <div class="faq-answer text-gray-600 leading-relaxed">
+                Ya, semua fitur SiANAK sepenuhnya gratis. Kami percaya bahwa
+                setiap remaja berhak mendapatkan akses ke informasi dan bantuan
+                untuk melindungi hak-hak mereka tanpa biaya.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rights FAQs -->
+        <div id="rights" class="mb-16" data-aos="fade-up">
+          <h3
+            class="text-2xl sm:text-3xl font-black mb-6 flex items-center gap-3"
+          >
+            <div
+              class="w-10 h-10 bg-gradient-to-br from-brand-teal-500 to-brand-teal-600 rounded-xl flex items-center justify-center"
+            >
+              <svg
+                class="w-6 h-6 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                />
+              </svg>
+            </div>
+            Hak Remaja
+          </h3>
+
+          <div class="space-y-4">
+            <!-- FAQ Item -->
+            <div
+              class="faq-item bg-white rounded-2xl p-6 shadow-lg border border-gray-100 cursor-pointer"
+              onclick="toggleFaq(this)"
+            >
+              <div class="flex items-center justify-between">
+                <h4 class="text-lg font-bold text-gray-800 flex-1 pr-4">
+                  Berapa usia minimum legal untuk menikah di Indonesia?
+                </h4>
+                <svg
+                  class="faq-icon w-6 h-6 text-brand-teal-600 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </div>
+              <div class="faq-answer text-gray-600 leading-relaxed">
+                Menurut Undang-Undang No. 16 Tahun 2019 tentang Perubahan atas
+                Undang-Undang No. 1 Tahun 1974 tentang Perkawinan, usia minimum
+                untuk menikah adalah 19 tahun untuk baik pria maupun wanita.
+                Dispensasi nikah hanya dapat diberikan dalam kasus yang sangat
+                luar biasa dengan pertimbangan dari pengadilan.
+              </div>
+            </div>
+
+            <!-- FAQ Item -->
+            <div
+              class="faq-item bg-white rounded-2xl p-6 shadow-lg border border-gray-100 cursor-pointer"
+              onclick="toggleFaq(this)"
+            >
+              <div class="flex items-center justify-between">
+                <h4 class="text-lg font-bold text-gray-800 flex-1 pr-4">
+                  Apa hak saya jika orang tua memaksa saya untuk menikah?
+                </h4>
+                <svg
+                  class="faq-icon w-6 h-6 text-brand-teal-600 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </div>
+              <div class="faq-answer text-gray-600 leading-relaxed">
+                Anda memiliki hak untuk menolak pernikahan yang tidak Anda
+                inginkan. Pernikahan harus berdasarkan persetujuan bebas dari
+                kedua calon pasangan. Jika Anda dipaksa, Anda dapat mencari
+                bantuan dari lembaga perlindungan anak, Komnas Perempuan, atau
+                melapor ke polisi. Kontak bantuan tersedia di platform kami.
+              </div>
+            </div>
+
+            <!-- FAQ Item -->
+            <div
+              class="faq-item bg-white rounded-2xl p-6 shadow-lg border border-gray-100 cursor-pointer"
+              onclick="toggleFaq(this)"
+            >
+              <div class="flex items-center justify-between">
+                <h4 class="text-lg font-bold text-gray-800 flex-1 pr-4">
+                  Apa saja dampak negatif pernikahan anak?
+                </h4>
+                <svg
+                  class="faq-icon w-6 h-6 text-brand-teal-600 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </div>
+              <div class="faq-answer text-gray-600 leading-relaxed">
+                Pernikahan anak memiliki banyak dampak negatif, termasuk: risiko
+                kematian ibu 5 kali lebih tinggi, komplikasi kehamilan, stunting
+                pada anak, putus sekolah, keterbatasan peluang karir, siklus
+                kemiskinan, kekerasan dalam rumah tangga, dan tingkat perceraian
+                yang tinggi (80% dalam 3 tahun pertama).
+              </div>
+            </div>
+
+            <!-- FAQ Item -->
+            <div
+              class="faq-item bg-white rounded-2xl p-6 shadow-lg border border-gray-100 cursor-pointer"
+              onclick="toggleFaq(this)"
+            >
+              <div class="flex items-center justify-between">
+                <h4 class="text-lg font-bold text-gray-800 flex-1 pr-4">
+                  Apakah hukum Indonesia melindungi remaja dari pernikahan dini?
+                </h4>
+                <svg
+                  class="faq-icon w-6 h-6 text-brand-teal-600 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </div>
+              <div class="faq-answer text-gray-600 leading-relaxed">
+                Ya, hukum Indonesia melindungi anak dari pernikahan dini. Selain
+                UU Perkawinan, ada juga UU No. 35 Tahun 2014 tentang
+                Perlindungan Anak, UU No. 23 Tahun 2002 tentang Perlindungan
+                Anak, dan Konvensi Hak-Hak Anak yang telah diratifikasi
+                Indonesia. Semua peraturan ini melarang pernikahan anak dan
+                mewajibkan negara untuk melindungi anak dari praktik ini.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Help FAQs -->
+        <div id="help" class="mb-16" data-aos="fade-up">
+          <h3
+            class="text-2xl sm:text-3xl font-black mb-6 flex items-center gap-3"
+          >
+            <div
+              class="w-10 h-10 bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl flex items-center justify-center"
+            >
+              <svg
+                class="w-6 h-6 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"
+                />
+              </svg>
+            </div>
+            Mendapat Bantuan
+          </h3>
+
+          <div class="space-y-4">
+            <!-- FAQ Item -->
+            <div
+              class="faq-item bg-white rounded-2xl p-6 shadow-lg border border-gray-100 cursor-pointer"
+              onclick="toggleFaq(this)"
+            >
+              <div class="flex items-center justify-between">
+                <h4 class="text-lg font-bold text-gray-800 flex-1 pr-4">
+                  Bagaimana cara menggunakan chatbot anonim?
+                </h4>
+                <svg
+                  class="faq-icon w-6 h-6 text-pink-600 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </div>
+              <div class="faq-answer text-gray-600 leading-relaxed">
+                Chatbot anonim kami sangat mudah digunakan. Cukup klik tombol
+                "Chatbot" di menu utama, lalu mulai mengetik pertanyaan atau
+                curhat Anda. Chatbot akan merespons dengan empati dan memberikan
+                informasi yang berguna. Tidak ada registrasi atau login yang
+                diperlukan, dan semua percakapan 100% anonim.
+              </div>
+            </div>
+
+            <!-- FAQ Item -->
+            <div
+              class="faq-item bg-white rounded-2xl p-6 shadow-lg border border-gray-100 cursor-pointer"
+              onclick="toggleFaq(this)"
+            >
+              <div class="flex items-center justify-between">
+                <h4 class="text-lg font-bold text-gray-800 flex-1 pr-4">
+                  Apa yang harus saya lakukan jika saya dalam bahaya segera?
+                </h4>
+                <svg
+                  class="faq-icon w-6 h-6 text-pink-600 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </div>
+              <div class="faq-answer text-gray-600 leading-relaxed">
+                Jika Anda dalam bahaya segera, hubungi nomor darurat:
+                <ul class="mt-2 ml-4 list-disc">
+                  <li>Polisi: 110</li>
+                  <li>Komnas Perempuan: +62-21-3903963</li>
+                  <li>Layanan Perlindungan Anak: 129</li>
+                </ul>
+                Jika memungkinkan, pergi ke tempat aman seperti rumah teman,
+                sekolah, atau kantor polisi terdekat. Setelah aman, Anda dapat
+                menggunakan platform kami untuk mendapatkan bantuan lebih
+                lanjut.
+              </div>
+            </div>
+
+            <!-- FAQ Item -->
+            <div
+              class="faq-item bg-white rounded-2xl p-6 shadow-lg border border-gray-100 cursor-pointer"
+              onclick="toggleFaq(this)"
+            >
+              <div class="flex items-center justify-between">
+                <h4 class="text-lg font-bold text-gray-800 flex-1 pr-4">
+                  Apakah informasi yang saya berikan ke chatbot aman?
+                </h4>
+                <svg
+                  class="faq-icon w-6 h-6 text-pink-600 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </div>
+              <div class="faq-answer text-gray-600 leading-relaxed">
+                Ya, 100% aman. Kami menggunakan enkripsi end-to-end untuk semua
+                percakapan, yang berarti hanya Anda yang dapat membaca pesan
+                Anda. Kami tidak menyimpan data pribadi, tidak menggunakan
+                cookies pelacakan, dan tidak membagikan informasi Anda dengan
+                pihak ketiga. Setelah sesi chat berakhir, percakapan akan
+                dihapus secara permanen.
+              </div>
+            </div>
+
+            <!-- FAQ Item -->
+            <div
+              class="faq-item bg-white rounded-2xl p-6 shadow-lg border border-gray-100 cursor-pointer"
+              onclick="toggleFaq(this)"
+            >
+              <div class="flex items-center justify-between">
+                <h4 class="text-lg font-bold text-gray-800 flex-1 pr-4">
+                  Bagaimana cara menghubungi lembaga bantuan?
+                </h4>
+                <svg
+                  class="faq-icon w-6 h-6 text-pink-600 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </div>
+              <div class="faq-answer text-gray-600 leading-relaxed">
+                Anda dapat menghubungi lembaga bantuan melalui fitur "Kontak" di
+                platform kami. Kami menyediakan direktori 38+ lembaga bantuan
+                terverifikasi di seluruh Jawa Timur, lengkap dengan nomor
+                telepon, alamat, dan layanan yang mereka sediakan. Anda dapat
+                menghubungi mereka langsung atau meminta kami untuk
+                menghubungkan Anda secara anonim.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section
+      class="py-20 bg-gradient-to-br from-brand-purple-600 via-brand-purple-700 to-brand-teal-600 relative overflow-hidden"
+    >
+      <!-- Decorative elements -->
+      <div class="absolute inset-0 opacity-10">
+        <div
+          class="absolute top-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl"
+        ></div>
+        <div
+          class="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"
+        ></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center" data-aos="fade-up">
+          <h2
+            class="text-4xl md:text-6xl font-black text-white mb-6 leading-tight"
+          >
+            Butuh Bantuan? <br />
+            <span class="text-brand-teal-300">Kami Siap Membantu</span>
+          </h2>
+          <p
+            class="text-xl text-brand-purple-100 mb-10 max-w-3xl mx-auto leading-relaxed"
+          >
+            Jangan ragu menghubungi kami. Semua percakapan 100% rahasia dan
+            anonim. Tim kami siap mendampingimu.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/pages/chatbot.html"
+              class="inline-flex items-center justify-center gap-2 px-10 py-5 bg-white text-brand-purple-600 font-bold rounded-xl hover:bg-brand-purple-50 transition-all duration-300 shadow-2xl hover:scale-105 text-lg"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+                />
+              </svg>
+              Mulai Chat Sekarang
+            </a>
+            <a
+              href="/pages/contacts.html"
+              class="inline-flex items-center justify-center gap-2 px-10 py-5 bg-transparent text-white font-bold rounded-xl border-2 border-white hover:bg-white/10 transition-all duration-300 shadow-2xl hover:scale-105 text-lg"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                />
+              </svg>
+              Lihat Kontak Bantuan
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-gray-300"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 mb-8 sm:mb-12"
+        >
+          <!-- Brand Column -->
+          <div class="lg:col-span-1">
+            <div class="flex items-center gap-3 mb-4 sm:mb-6">
+              <div
+                class="w-10 h-10 bg-gradient-to-br from-brand-purple-600 to-brand-teal-500 rounded-xl flex items-center justify-center shadow-lg"
+              >
+                <svg
+                  class="w-6 h-6 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                  />
+                </svg>
+              </div>
+              <span class="text-2xl font-black gradient-text">SiANAK</span>
+            </div>
+            <p
+              class="text-sm sm:text-base text-gray-400 leading-relaxed mb-4 sm:mb-6"
+            >
+              Platform pencegahan pernikahan anak di Jawa Timur. Melindungi hak
+              remaja untuk menentukan masa depannya sendiri.
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h3 class="text-white font-bold text-base sm:text-lg mb-4 sm:mb-6">
+              Fitur Utama
+            </h3>
+            <ul class="space-y-2 sm:space-y-3 text-sm sm:text-base">
+              <li>
+                <a
+                  href="/pages/risk-assessment.html"
+                  class="hover:text-brand-purple-400 transition-colors hover:translate-x-1 inline-block"
+                  >Cek Risiko</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/pages/chatbot.html"
+                  class="hover:text-brand-purple-400 transition-colors hover:translate-x-1 inline-block"
+                  >Chatbot Anonim</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/pages/contacts.html"
+                  class="hover:text-brand-purple-400 transition-colors hover:translate-x-1 inline-block"
+                  >Kontak Bantuan</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/pages/stories.html"
+                  class="hover:text-brand-purple-400 transition-colors hover:translate-x-1 inline-block"
+                  >Kisah Inspiratif</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/pages/education.html"
+                  class="hover:text-brand-purple-400 transition-colors hover:translate-x-1 inline-block"
+                  >Edukasi</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Resources -->
+          <div>
+            <h3 class="text-white font-bold text-base sm:text-lg mb-4 sm:mb-6">
+              Sumber Daya
+            </h3>
+            <ul class="space-y-2 sm:space-y-3 text-sm sm:text-base">
+              <li>
+                <a
+                  href="/pages/about.html"
+                  class="hover:text-brand-purple-400 transition-colors hover:translate-x-1 inline-block"
+                  >Tentang Kami</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/pages/faq.html"
+                  class="hover:text-brand-purple-400 transition-colors hover:translate-x-1 inline-block"
+                  >FAQ</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/pages/privacy.html"
+                  class="hover:text-brand-purple-400 transition-colors hover:translate-x-1 inline-block"
+                  >Kebijakan Privasi</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Emergency -->
+          <div>
+            <h3 class="text-white font-bold text-base sm:text-lg mb-4 sm:mb-6">
+              Bantuan Darurat
+            </h3>
+            <div
+              class="bg-status-danger-500/20 border-2 border-status-danger-500 rounded-2xl sm:rounded-3xl p-4 sm:p-6"
+            >
+              <div
+                class="w-10 h-10 sm:w-12 sm:h-12 bg-status-danger-500 rounded-xl flex items-center justify-center mx-auto mb-3"
+              >
+                <svg
+                  class="w-5 h-5 sm:w-6 sm:h-6 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+                  />
+                </svg>
+              </div>
+              <p
+                class="text-xs sm:text-sm text-gray-300 mb-3 sm:mb-4 text-center"
+              >
+                Jika kamu dalam bahaya, hubungi:
+              </p>
+              <a
+                href="tel:+62-21-3903963"
+                class="flex items-center justify-center gap-2 py-2.5 sm:py-3 bg-status-danger-600 hover:bg-status-danger-700 text-white text-sm sm:text-base font-bold rounded-lg transition-all hover:scale-105 shadow-lg mb-2 sm:mb-3"
+              >
+                <svg
+                  class="w-4 h-4 sm:w-5 sm:h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                  />
+                </svg>
+                <span class="break-all">+62-21-3903963</span>
+              </a>
+              <p class="text-xs text-gray-400 text-center">
+                (Komnas Perempuan)
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div
+          class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-6"
+        >
+          <p class="text-gray-400 text-sm text-center md:text-left">
+            © 2025 SiANAK. Dikembangkan dengan kasih sayang untuk masa depan
+            remaja Indonesia.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <span
+              class="px-4 py-2 bg-gray-800 rounded-full text-xs font-semibold flex items-center gap-2"
+            >
+              <svg
+                class="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                />
+              </svg>
+              Privasi Terjamin
+            </span>
+            <span
+              class="px-4 py-2 bg-gray-800 rounded-full text-xs font-semibold flex items-center gap-2"
+            >
+              <svg
+                class="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+              Data Terenkripsi
+            </span>
+            <span
+              class="px-4 py-2 bg-gray-800 rounded-full text-xs font-semibold flex items-center gap-2"
+            >
+              <svg
+                class="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"
+                />
+              </svg>
+              Dukungan 24/7
+            </span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="/assets/js/aos-init.js"></script>
+    <script src="/assets/js/stats-counter.js"></script>
+    <script src="/assets/js/navbar.js"></script>
+    <script>
+      function toggleFaq(element) {
+        element.classList.toggle("active");
       }
     </script>
-<style>
-        body {
-            font-family: 'Manrope', sans-serif;
-        }
-    </style>
-</head>
-<body class="bg-background-light dark:bg-background-dark font-display text-[#333333] dark:text-[#EAEAEA]">
-<!-- TopNavBar -->
-<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
-<div class="container mx-auto px-4">
-<div class="flex items-center justify-between whitespace-nowrap border-b border-solid border-black/10 dark:border-white/10 py-3">
-<div class="flex items-center gap-8">
-<div class="flex items-center gap-4 text-black dark:text-white">
-<div class="size-6 text-primary">
-<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-<path d="M4 42.4379C4 42.4379 14.0962 36.0744 24 41.1692C35.0664 46.8624 44 42.2078 44 42.2078L44 7.01134C44 7.01134 35.068 11.6577 24.0031 5.96913C14.0971 0.876274 4 7.27094 4 7.27094L4 42.4379Z" fill="currentColor"></path>
-</svg>
-</div>
-<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">Warisan Lisan</h2>
-</div>
-<nav class="hidden md:flex items-center gap-9">
-<a class="text-sm font-medium leading-normal hover:text-primary" href="#">Jelajahi</a>
-<a class="text-sm font-medium leading-normal hover:text-primary" href="#">Tentang Kami</a>
-<a class="text-sm font-medium leading-normal hover:text-primary" href="#">Kontribusi</a>
-</nav>
-</div>
-<div class="flex flex-1 justify-end items-center gap-4">
-<label class="hidden md:flex flex-col min-w-40 !h-10 max-w-64">
-<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
-<div class="text-black/60 dark:text-white/60 flex border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/5 items-center justify-center pl-3 rounded-l-lg border-r-0">
-<span class="material-symbols-outlined" style="font-size: 20px;">search</span>
-</div>
-<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/5 h-full placeholder:text-black/60 dark:placeholder:text-white/60 px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal" placeholder="Cari..." value=""/>
-</div>
-</label>
-<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-background-dark text-sm font-bold leading-normal tracking-[0.015em]">
-<span class="truncate">Masuk</span>
-</button>
-<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User avatar placeholder" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB78q9APuxsUTZN-jdi3zKv-yUEqBzfhgs9a7O8pFIqz-h9DnXQxUp--P3LvPHNHzO7rvH8UNA24Ro6LRz_qzqKNpcnlGE3R-Gqixmu99mmnMC3ljteYVC-0SSbkbJqyHFZ9cWblUHLc-CxlMqWWvVPpBh5uWJE6-paM7KN3wcgAsRio1effh4BwgphsB7YYo6zLqJcua2Ud0fuDkz6GUAbao2tzliiZ3cpwiNbKvftzlwUZ4033ZELf2aez1R87a3ZxrzKcUUZP1Y");'></div>
-</div>
-</div>
-</div>
-</header>
-<main class="container mx-auto px-4 py-8">
-<div class="w-full">
-<!-- Breadcrumbs -->
-<div class="flex flex-wrap gap-2 mb-6">
-<a class="text-black/60 dark:text-white/60 hover:text-primary text-sm font-medium leading-normal" href="#">Beranda</a>
-<span class="text-black/60 dark:text-white/60 text-sm font-medium leading-normal">/</span>
-<a class="text-black/60 dark:text-white/60 hover:text-primary text-sm font-medium leading-normal" href="#">Jawa Barat</a>
-<span class="text-black/60 dark:text-white/60 text-sm font-medium leading-normal">/</span>
-<a class="text-black/60 dark:text-white/60 hover:text-primary text-sm font-medium leading-normal" href="#">Tradisi Lisan</a>
-<span class="text-black/60 dark:text-white/60 text-sm font-medium leading-normal">/</span>
-<span class="text-black dark:text-white text-sm font-medium leading-normal">Upacara Adat Seren Taun</span>
-</div>
-<div class="grid grid-cols-1 lg:grid-cols-3 lg:gap-8">
-<!-- Left Column -->
-<div class="lg:col-span-2">
-<!-- MediaPlayer -->
-<div class="relative flex items-center justify-center bg-black bg-cover bg-center aspect-video rounded-xl overflow-hidden mb-6" data-alt="Video thumbnail of a cultural ceremony" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBPdVvHEoaloYITq2ud6Fw6uLCNkkwZrcJCmRWK7hcNl1p3x6QOz0oYVyxRN4TOa-eyXO9McazC7XkSI5pIPYiXU5T3sxe-b0VVkx8nTl1YWrHyU7coVe7zDv9G8Aoy-j0NSY4fMEOjoZtb83YjRcMZGlqgSSxuVbddjQjUqrroRAFoSqoR48ixxjTMhaUQv_awp3FxzrKo4xEG8uASfjJDBFVY8fDDe0_8SpSoSq7nFAVnpEOKawBVG6rnKmJq2FtQE7neV_8esHE");'>
-<button class="flex shrink-0 items-center justify-center rounded-full size-16 bg-black/50 text-white backdrop-blur-sm">
-<span class="material-symbols-outlined text-4xl">play_arrow</span>
-</button>
-<div class="absolute inset-x-0 bottom-0 px-4 py-3 bg-gradient-to-t from-black/60 to-transparent">
-<div class="flex h-4 items-center justify-center">
-<div class="h-1 flex-1 rounded-full bg-primary"></div>
-<div class="relative"><div class="absolute -left-2 -top-[6px] size-4 rounded-full bg-white ring-2 ring-primary"></div></div>
-<div class="h-1 flex-1 rounded-full bg-white/40"></div>
-</div>
-<div class="flex items-center justify-between">
-<p class="text-white text-xs font-medium leading-normal tracking-[0.015em]">12:37</p>
-<p class="text-white text-xs font-medium leading-normal tracking-[0.015em]">25:12</p>
-</div>
-</div>
-</div>
-<!-- PageHeading -->
-<div class="flex flex-wrap justify-between gap-3 mb-4">
-<div class="flex min-w-72 flex-col gap-2">
-<h1 class="text-black dark:text-white text-4xl font-black leading-tight tracking-[-0.033em]">Upacara Adat Seren Taun di Kasepuhan Ciptagelar</h1>
-<p class="text-black/60 dark:text-white/60 text-base font-normal leading-normal">Dilihat 1,234 kali</p>
-</div>
-</div>
-<!-- Chips -->
-<div class="flex gap-2 p-1 flex-wrap mb-6">
-<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-black/10 dark:bg-white/10 px-3">
-<p class="text-black dark:text-white text-sm font-medium leading-normal">Upacara Adat</p>
-</div>
-<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-black/10 dark:bg-white/10 px-3">
-<p class="text-black dark:text-white text-sm font-medium leading-normal">Jawa Barat</p>
-</div>
-<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-black/10 dark:bg-white/10 px-3">
-<p class="text-black dark:text-white text-sm font-medium leading-normal">Bahasa Sunda</p>
-</div>
-</div>
-<!-- Description -->
-<div class="prose prose-lg dark:prose-invert max-w-none text-black/80 dark:text-white/80 font-normal leading-relaxed mb-8">
-<p>Upacara Adat Seren Taun merupakan sebuah ritual agraris yang dilakukan oleh masyarakat Sunda sebagai ungkapan rasa syukur atas hasil panen padi yang melimpah. Di Kasepuhan Ciptagelar, tradisi ini telah berlangsung selama ratusan tahun dan menjadi pusat kegiatan budaya tahunan.</p>
-<p>Ritual ini tidak hanya sekadar perayaan panen, tetapi juga mencakup serangkaian prosesi adat yang sarat makna filosofis, mulai dari 'Ngajayak' (menjemput padi) hingga 'Pesta Dadung' dan pertunjukan seni tradisional. Dokumentasi ini merekam secara mendalam setiap tahapan upacara dan wawancara dengan para sesepuh adat mengenai pentingnya menjaga warisan leluhur ini.</p>
-</div>
-<!-- Metadata -->
-<div class="border-t border-black/10 dark:border-white/10 pt-6">
-<h3 class="text-xl font-bold mb-4">Detail Dokumentasi</h3>
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4 text-sm">
-<div class="flex"><strong class="w-32 shrink-0 font-semibold">Tanggal</strong>: 22 Agustus 2023</div>
-<div class="flex"><strong class="w-32 shrink-0 font-semibold">Durasi</strong>: 25 menit 12 detik</div>
-<div class="flex"><strong class="w-32 shrink-0 font-semibold">Bahasa</strong>: Sunda, Indonesia</div>
-<div class="flex"><strong class="w-32 shrink-0 font-semibold">Lokasi</strong>: Kasepuhan Ciptagelar, Sukabumi</div>
-</div>
-</div>
-</div>
-<!-- Right Column -->
-<div class="lg:col-span-1 space-y-8 mt-8 lg:mt-0">
-<!-- Action Buttons -->
-<div class="flex items-center space-x-2">
-<button class="flex-1 flex items-center justify-center gap-2 h-11 rounded-lg bg-black/10 dark:bg-white/10 hover:bg-black/20 dark:hover:bg-white/20 transition-colors">
-<span class="material-symbols-outlined">thumb_up</span>
-<span class="font-bold">1.2k</span>
-</button>
-<button class="flex-1 flex items-center justify-center gap-2 h-11 rounded-lg bg-black/10 dark:bg-white/10 hover:bg-black/20 dark:hover:bg-white/20 transition-colors">
-<span class="material-symbols-outlined">share</span>
-<span class="font-bold">Bagikan</span>
-</button>
-<button class="flex-1 flex items-center justify-center gap-2 h-11 rounded-lg bg-black/10 dark:bg-white/10 hover:bg-black/20 dark:hover:bg-white/20 transition-colors">
-<span class="material-symbols-outlined">download</span>
-<span class="font-bold">Unduh</span>
-</button>
-</div>
-<!-- Contributor Card -->
-<div class="bg-black/5 dark:bg-white/10 rounded-xl p-5">
-<h3 class="text-lg font-bold mb-4">Kontributor</h3>
-<div class="flex items-center gap-4">
-<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12" data-alt="Avatar of Budi Santoso" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAEI8_l707EASd35LpfnYqoNY9xCHOmUdbGhPUWRoQ-PUwbbBopxzGBwn4Fzfdf4Umf3L28pzO2D3KfayiWlB62oGCIX65wmIzeArfGyvQCgVAcXNm4CkmRFAA_-OSVHEIETqB-ZEuYOqGr2ATwJW5usukYwTd0_G7rnJ2QQEtM9sUmaPMos--3JH-R79R7qwAoJr0RBu21PvK1XD8Vo6cuNgiGdkeXtAsjHq6xoCkqDSJv8SupX60cN3WOQgSpHXpviwuQzm8LWjE");'></div>
-<div>
-<p class="font-bold text-base">Budi Santoso</p>
-<p class="text-sm text-black/60 dark:text-white/60">Desa Ciptagelar</p>
-<p class="text-sm text-black/60 dark:text-white/60">12 Kontribusi</p>
-</div>
-</div>
-</div>
-<!-- Source Person Card -->
-<div class="bg-black/5 dark:bg-white/10 rounded-xl p-5">
-<h3 class="text-lg font-bold mb-4">Narasumber</h3>
-<div class="flex items-center gap-4">
-<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12" data-alt="Photo of Abah Ugi" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDunxLc1KOM1uKZJK9YXMPQopdACA8HLMKV4FsPCABOHySsJNBtyl5qFv44MPViU_pcwpwCc6srVXGXrkCSZVaKFWhHXGP4ccEQSIHdcUPFiu2tysEaQs35cwM2StJgB2QC5pW3elUVKb4pMGBnMBEhzdod7nIJN83kYZH13V1d6eq5BAfijPuOYjxlLx1ybMVSngcxRXmhHeeSqIByw5BXf5NH14GOavbCJNSzUpIKGyxk9F_PdItRFUN28PZ-1OTtZe6gq4rnpYk");'></div>
-<div>
-<p class="font-bold text-base">Abah Ugi Sugriana Rakasiwi</p>
-<p class="text-sm text-black/60 dark:text-white/60">Pimpinan Adat (82 tahun)</p>
-</div>
-</div>
-</div>
-<!-- Educator Section -->
-<div class="bg-black/5 dark:bg-white/10 rounded-xl p-5">
-<h3 class="text-lg font-bold mb-4 flex items-center gap-2"><span class="material-symbols-outlined text-primary">school</span> Materi Pembelajaran</h3>
-<ul class="space-y-3 text-sm font-medium">
-<li><a class="flex items-center gap-2 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">description</span> Unduh RPP (.pdf)</a></li>
-<li><a class="flex items-center gap-2 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">assignment</span> Unduh Lembar Kerja Siswa (.pdf)</a></li>
-<li><a class="flex items-center gap-2 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">quiz</span> Unduh Kuis (.docx)</a></li>
-<li><a class="flex items-center gap-2 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">code</span> Kode Sematan LMS</a></li>
-</ul>
-<button class="mt-5 w-full flex items-center justify-center gap-2 h-11 rounded-lg bg-primary text-background-dark font-bold hover:bg-primary/90 transition-colors">
-<span class="material-symbols-outlined">add_circle</span>
-<span>Tambah ke Koleksi Saya</span>
-</button>
-</div>
-<!-- Researcher Section -->
-<div class="bg-black/5 dark:bg-white/10 rounded-xl p-5">
-<h3 class="text-lg font-bold mb-4 flex items-center gap-2"><span class="material-symbols-outlined text-primary">science</span> Alat Penelitian</h3>
-<div class="space-y-3 text-sm">
-<p class="font-medium">Format Kutipan:</p>
-<div class="bg-black/10 dark:bg-white/10 p-3 rounded-lg text-xs font-mono">
-<p>Santoso, B. (2023). Upacara Adat Seren Taun di Kasepuhan Ciptagelar. Warisan Lisan. Diambil dari [URL]</p>
-</div>
-<div class="flex gap-2">
-<button class="text-xs font-bold py-1 px-3 rounded-full bg-primary text-background-dark">APA</button>
-<button class="text-xs font-bold py-1 px-3 rounded-full bg-black/20 dark:bg-white/20">MLA</button>
-</div>
-</div>
-<div class="flex gap-2 mt-5">
-<button class="flex-1 flex items-center justify-center gap-2 h-11 rounded-lg bg-black/10 dark:bg-white/10 font-bold hover:bg-black/20 dark:hover:bg-white/20 transition-colors">
-<span class="material-symbols-outlined">file_download</span>
-<span>Ekspor (JSON)</span>
-</button>
-<button class="w-full flex-1 items-center justify-center gap-2 h-11 rounded-lg bg-primary text-background-dark font-bold hover:bg-primary/90 transition-colors">
-<span class="material-symbols-outlined">add_circle</span>
-<span>Tambah ke Koleksi</span>
-</button>
-</div>
-</div>
-</div>
-</div>
-<!-- Related Content -->
-<div class="mt-16 border-t border-black/10 dark:border-white/10 pt-8">
-<h2 class="text-2xl font-bold mb-6">Konten Terkait</h2>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-<!-- Related Item Card -->
-<div class="group">
-<div class="relative aspect-video rounded-lg overflow-hidden mb-3">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-300 group-hover:scale-105" data-alt="Thumbnail for related content 1" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDiaT5CRZtvK9waJVHLn4n0qatS6Vgz7Vq9eTLpV70fMb7o_LO4U94FHsgxDvHKtGESWLyUsiyAerlfLnQpVoOaig6iPyPQFOOW7bX7P6i8RJUoxSEhPjGuRJ7JXCa6RYoFUWHOq9dGNtOG0kxeYiQBXusxNU1Qyq-bZh-D99y5SnaM9V6dZWVGYGZOTbAafnXhsb1pGtwH3pZPCFzKEwQqq5DsV-eQR8jGuW3dmt_ukzB5bTmdafeyqDHljh6Hy-Khd4m6Q_dAbbA");'></div>
-<div class="absolute inset-0 bg-black/20"></div>
-<div class="absolute bottom-2 right-2 bg-black/60 text-white text-xs font-bold px-2 py-1 rounded">15:45</div>
-</div>
-<h4 class="font-bold text-base group-hover:text-primary transition-colors">Tradisi Menenun di Desa Sade</h4>
-<p class="text-sm text-black/60 dark:text-white/60">Lombok, Nusa Tenggara Barat</p>
-</div>
-<!-- Related Item Card -->
-<div class="group">
-<div class="relative aspect-video rounded-lg overflow-hidden mb-3">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-300 group-hover:scale-105" data-alt="Thumbnail for related content 2" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCnpoNOgHB_qavhiTR4Lh5bgAJZn630Gzh-d8HhQDbisCQPxNvYigQHgVGA1Pd7pl16s74hGok_-13x5dW6IBCkMd8jMQ-ROG4V9hsh7zpohYXxNSza0k8ThtOEZisuQDOaywDWBouJC-LqABo6zwzIWo3-Ky_XsKDFASk5LIXeXtWxqcpG05x3soVI1qHmwePY-MySWqca_RxvgSPgHcCNpqMAS9bQ6ld4-pKujr1Yr0_Rui8zSxc_S2z1HWcuf0Qvl17cfOrknao");'></div>
-<div class="absolute inset-0 bg-black/20"></div>
-<div class="absolute bottom-2 right-2 bg-black/60 text-white text-xs font-bold px-2 py-1 rounded">08:12</div>
-</div>
-<h4 class="font-bold text-base group-hover:text-primary transition-colors">Upacara Rambu Solo di Tana Toraja</h4>
-<p class="text-sm text-black/60 dark:text-white/60">Sulawesi Selatan</p>
-</div>
-<!-- Related Item Card -->
-<div class="group">
-<div class="relative aspect-video rounded-lg overflow-hidden mb-3">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-300 group-hover:scale-105" data-alt="Thumbnail for related content 3" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBBwHSy1rKbXlFvwdK-zDa4BzjUgpuFkLYwXOlwmXC-VF8tZeGL86noBHD8tcz8AxUu4FVR7JvKUdbWrr8ooL8HCf-P7zyCjb2lUYL_7VOz0M6nIIF_O1Z67HfmAF503ArB-gbHCf2-Oeywb2JfrQhFWQp8EV5QPwVKd6DeloVGKCHQ50zFOQIvdcEkQYeiDqNxaDCvU68ZUbOurJXI4z_6JJNe0ubvCoAxnmaMGbFPKI7Q8dGh3FR0-R6ppam8srPV8kABS95L0vc");'></div>
-<div class="absolute inset-0 bg-black/20"></div>
-<div class="absolute bottom-2 right-2 bg-black/60 text-white text-xs font-bold px-2 py-1 rounded">32:05</div>
-</div>
-<h4 class="font-bold text-base group-hover:text-primary transition-colors">Kisah Para Empu Keris di Madura</h4>
-<p class="text-sm text-black/60 dark:text-white/60">Sumenep, Jawa Timur</p>
-</div>
-</div>
-</div>
-</div>
-</main>
-</body></html>
+  </body>
+</html>
