@@ -11,3 +11,5 @@ Platform AI-powered untuk mencegah pernikahan anak di Jawa Timur.
 - HTML5, CSS3, Vanilla JavaScript
 - Tailwind CSS (via CDN)
 - LocalStorage untuk menyimpan data
+- JSON
+- AOS
